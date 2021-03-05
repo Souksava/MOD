@@ -20,12 +20,14 @@ RewriteRule ^hrd/report/report-hrd?$ hrd/report/report_hrd.php
 
 ## demand 
 RewriteRule ^demand/index?$ demand/index.php
+RewriteRule ^demand/main?$ demand/main.php
 RewriteRule ^demand/create/new-demand?$ demand/create/new_demand.php
 RewriteRule ^demand/report/report-demand?$ demand/create/report_demand.php
 RewriteRule ^demand/report/report-hrd?$ demand/create/report_hrd.php
 
 ## supply
 RewriteRule ^supply/index?$ supply/index.php
+RewriteRule ^supply/main?$ supply/main.php
 RewriteRule ^supply/create/new-supply?$ supply/create/new_supply.php
 RewriteRule ^supply/data/faculty?$ supply/data/faculty.php
 RewriteRule ^supply/data/course?$ supply/data/course.php
@@ -34,6 +36,7 @@ RewriteRule ^supply/report/report-hrd?$ supply/create/report_hrd.php
 
 ## admin
 RewriteRule ^admin/index?$ admin/index.php
+RewriteRule ^admin/main?$ admin/main.php
 RewriteRule ^admin/data/user?$ admin/data/user.php
 RewriteRule ^admin/edit/demand?$ admin/edit/demand.php
 RewriteRule ^admin/edit/distribute?$ admin/edit/distribute.php
