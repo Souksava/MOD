@@ -3,7 +3,7 @@
   $path = "../";
   $links = "";
   $session_path = "../";
-  include ("../header-footer/header.php");
+  include ("../header-footer/header_demand.php");
 ?>
 <div class="row">
     <a href="<?php echo $links ?>create/new-demand" class="m-a">
