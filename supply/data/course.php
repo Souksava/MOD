@@ -33,7 +33,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນປະເພດສິນຄ້າ</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນລະຫັດສາຂາວິຊາ</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span a ria-hidden="true">&times;</span>
                             </button>
@@ -41,8 +41,22 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຊື່ປະເພດສິນຄ້າ</label>
-                                    <input type="text" name="cate_name" id="cate_name" placeholder="ຊື່ປະເພດສິນຄ້າ" class="form-control">
+                                    <label>ລະຫັດສາຂາວິຊາ</label>
+                                    <input type="text" name="Course_ID" id="Course_ID" placeholder="ລະຫັດສາຂາວິຊາ" class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຊື່ສາຂາວິຊາ</label>
+                                    <input type="text" name="Course_Name" id="Course_Name" placeholder="ຊື່ສາຂາວິຊາ" class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຄະນະ</label>
+                                    <input type="text" name="Fac_ID" id="Fac_ID" placeholder="ຄະນະ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -66,21 +80,33 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນສາຂາວິຊາ </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="row" align="left">
+
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຊື່ຫົວໜ່ວຍສິນຄ້າ</label>
-                                    <input type="hidden" name="cate_id_update" id="cate_id_update"
-                                        placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                    <input type="text" name="cate_name_update" id="cate_name_update"
-                                        placeholder="ຊື່ຫົວໜ່ວຍສິນຄ້າ" class="form-control">
+                                    <label>ລະຫັດສາຂາວິຊາ</label>
+                                    <input type="text" name="Course_ID_update" id="Course_ID_update" placeholder="ລະຫັດສາຂາວິຊາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle"></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຊື່ສາຂາວິຊາ</label>
+                                    <input type="text" name="Course_Name_update" id="Course_Name_update" placeholder="ຊື່ສາຂາວິຊາ" class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຄະນະ</label>
+                                    <input type="text" name="Fac_ID_update" id="Fac_ID_update" placeholder="ຄະນະ" class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
                                 </div>
                             </div>
@@ -98,7 +124,27 @@
     </div>
 </div>
 <div class="clearfix"></div><br>
-<div id="result"></div>
+<div id="result">
+<div class="table-responsive">
+   <table class="table font12" style="width: 1500px;">
+    <tr>
+    <th>ລະຫັດສາຂາວິຊາ</th>
+    <th>ຊື່ສາຂາວິຊາ</th>
+    <th>ຄະນະ</th>
+    <th></th>
+    </tr>
+   <tr  class="result">
+    <td>1</td>
+    <td>hfhhhf</td>
+    <td>hfhhhf</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
+   </table>
+</div>
+</div>
 
 
 <form action="category" id="formDelete" method="POST" enctype="multipart/form-data">

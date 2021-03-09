@@ -38,6 +38,9 @@ RewriteRule ^supply/report/report-hrd?$ supply/create/report_hrd.php
 RewriteRule ^admin/index?$ admin/index.php
 RewriteRule ^admin/main?$ admin/main.php
 RewriteRule ^admin/data/user?$ admin/data/user.php
+RewriteRule ^admin/data/user-hrd?$ admin/data/user_hrd.php
+RewriteRule ^admin/data/user-Supply?$ admin/data/user_Supply.php
+RewriteRule ^admin/data/user-demand?$ admin/data/user_demand.php
 RewriteRule ^admin/edit/edit-demand?$ admin/edit/edit_demand.php
 RewriteRule ^admin/edit/edit-distribute?$ admin/edit/edit_distribute.php
 RewriteRule ^admin/edit/edit-share?$ admin/edit/edit_share.php

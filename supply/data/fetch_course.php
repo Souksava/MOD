@@ -24,17 +24,18 @@ if(mysqli_num_rows($resultcategory) > 0)
   <div class="table-responsive">
    <table class="table font12" style="width: 1500px;">
     <tr>
-    <th>ລະຫັດຍີ່ຫໍ້</th>
-    <th>ຊື່ຍີ່ຫໍ້</th>
-    <th></th>
+    <th>ລະຫັດສາຂາວິຊາ</th>
+    <th>ຊື່ສາຂາວິຊາ</th>
+    <th>ຄະນະ</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($resultcategory))
  {
   $output .= '
    <tr  class="result">
-    <td>'.$row["cate_id"].'</td>
-    <td>'.$row["cate_name"].'</td>
+    <td>'.$row["Course_ID"].'</td>
+    <td>'.$row["Course_Name"].'</td>
+    <td>'.$row["Fac_ID"].'</td>
     <td>
       <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
       <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>

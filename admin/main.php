@@ -6,9 +6,25 @@
   include ("../header-footer/header_admin.php");
 ?>
 <div class="row">
-    <a href="<?php echo $links ?>data/user" class="m-a">
+  <a href="<?php echo $links ?>data/user" class="m-a">
         <div class="btn btn-light mainlink">
-            ຈັດການຂໍ້ມູນຜູ້ໃຊ້ລະບົບ
+           ຂໍ້ມູນຜູ້ໃຊ້
+        </div>
+    </a>
+
+    <a href="<?php echo $links ?>data/user-demand" class="m-a">
+        <div class="btn btn-light mainlink">
+        ຂໍ້ມູນຜູ້ຂໍທຶນການສຶກສາ 
+        </div>
+    </a>
+    <a href="<?php echo $links ?>data/user-Supply" class="m-a">
+        <div class="btn btn-light mainlink">
+        ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບພະນັກງານ 
+        </div>
+    </a>
+    <a href="<?php echo $links ?>data/user-hrd" class="m-a">
+        <div class="btn btn-light mainlink">
+        ຂໍ້ມູນຜູ້ໃຊ້ແບ່ງປັນທຶນການສຶກສາ
         </div>
     </a>
     <a href="<?php echo $links ?>edit/edit-share" class="m-a">
