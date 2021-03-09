@@ -1,9 +1,9 @@
 <?php
-  $title = "ຂໍ້ມູນຜູ້ຂໍທຶນການສຶກສາ  ";
+  $title = "ຂໍ້ມູນຜູ້ຂໍທຶນການສຶກສາ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
-  include ("../../header-footer/header.php");
+  include ("../../header-footer/header_admin.php");
   ?>
 
 

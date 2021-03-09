@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/vendors/aos/dist/aos.css/aos.css" />
     <link rel="stylesheet" href="./assets/vendors/owl.carousel/dist/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/vendors/owl.carousel/dist/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- End plugin css for this page -->
     <link rel="shortcut icon" href="image/logo.png" />
     <!-- inject:css -->
@@ -25,77 +26,11 @@
 
     <div class="container-scroller">
         <div class="main-panel">
-            <header id="header">
-                <div class="container">
-                    <!-- partial:partials/_navbar.html -->
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <nav class="navbar navbar-inverse">
-                            <div class="navbar-bottom-menu">
-                                <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent"
-                                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+        <?php
 
-                                <div class="navbar-collapse justify-content-center collapse"
-                                    id="navbarSupportedContent">
-                                    <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
-                                        <li>
-                                            <button class="navbar-close">
-                                                <i class="mdi mdi-close"></i>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <a class="navbar-brand" href="#"><img src="image/logo.png" alt=""
-                                                    width="70px" height="70px" /></a>
-                                        </li>
-                                        <li class="nav-item active">
-                                            <a class="nav-link active" href="index.php">ໜ້າຫຼັກ</a>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link"
-                                                href="">ພາລະບົດບາດ<b class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">ນິຕິກຳ<b
-                                                    class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">ແຜນປີ<b
-                                                    class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/business.html">ຂໍ້ມູນ</a>
-                                        </li>
-                                        <li class="nav-item"><a href="user/test.php" class="nav-link">ເຂົ້າ​ສູ່​ລະ​ບົບ</a></li>
-                                        <li class="nav-item">
-                                            <form class="navbar-form form-inline">
-                                                <div class="input-group search-box">
-                                                    <input type="text" id="search" class="form-control"
-                                                        placeholder="ຄົ້ນຫາ...">
-                                                </div>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                </div>
+include ("./navbar.php");
+
+?>
                 <!-- container -->
                 <!-- slide -->
                 <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

@@ -176,8 +176,6 @@ echo '
                         </li>
 
 
-
-
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
@@ -482,14 +480,52 @@ elseif ($user == 4){
             <!-- Add icons to the links using the .nav-icon class
    with font-awesome or any other icon font library -->
 
-   <li class="nav-item">
-   <a href="'.$links.'data/user" class="nav-link">
-   <i class="fas fa fa-book nav-icon"></i>
-   <p>
-   ຈັດການຂໍ້ມູນຜູ້ໃຊ້ລະບົບ
-   </p>
-   </a>
-</li>
+
+
+<li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p>
+                    ຈັດການຂໍ້ມູນຜູ້ໃຊ້ລະບົບ
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <a href="'.$links.'data/user" class="nav-link">
+                <i class="fas fa fa-book nav-icon"></i>
+                <p>
+                ຂໍ້ມູນຜູ້ໃຊ້
+                </p>
+                </a>
+             </li>
+                    <li class="nav-item">
+                        <a href="'.$links.'data/user-demand" class="nav-link">
+                            <i class="far fas fa-book nav-icon"></i>
+                            <p>ຂໍ້ມູນຜູ້ຂໍທຶນການສຶກສາ </p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="'.$links.'data/user-Supply" class="nav-link">
+                            <i class="far fas fa-book nav-icon"></i>
+                            <p>ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບພະນັກງານ</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="'.$links.'data/user-hrd" class="nav-link">
+                        <i class="far fas fa-book nav-icon"></i>
+                        <p>ຂໍ້ມູນຜູ້ໃຊ້ແບ່ງປັນທຶນການສຶກສາ</p>
+                    </a>
+                </li>
+            </ul>
+
+            </li>
+
+
 
    <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
