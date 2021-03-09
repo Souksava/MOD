@@ -8,7 +8,7 @@
 <div class="row">
     <a href="<?php echo $links ?>file/type" class="m-a">
         <div class="btn btn-light mainlink">
-            ຈັດການປະເພດຟາຍ
+            ຈັດການປະເພດເອກະສານ
         </div>
     </a>
     <a href="<?php echo $links ?>file/upload" class="m-a">

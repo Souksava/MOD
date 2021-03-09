@@ -1,5 +1,5 @@
 <?php
-  $title = "ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບພະນັກງານ";
+  $title = "ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບນັກຮຽນ ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
@@ -127,7 +127,7 @@
                   <div class="modal-dialog" role="document">
                       <div class="modal-content">
                           <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບພະນັກງານ</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບນັກຮຽນ </h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -193,8 +193,8 @@
                                       <label>ວິທະຍາໄລ</label>
                                       <select name="status" id="status">
                                         <option value="">--- ເລືອກວິທະຍາໄລ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                        <option value="1">ກ</option>
+                                        <option value="2">ຂ</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -233,14 +233,14 @@
       </tr>
      <tr  class="result">
       <td>1</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
+      <td>ທ້າວ ສຸກສະຫວັນ</td>
+      <td>ສົມໃຈ</td>
+      <td>ຍີ່ງ</td>
+      <td>02078883344</td>
+      <td>Pokky89@gmail.com</td>
+      <td>TG001</td>
+      <td>1</td>
+      <td>ວິທະຍາໄລ ກຳມະສາດ</td>
       <td>
         <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
         <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>

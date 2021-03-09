@@ -49,7 +49,7 @@
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສົກຮຽນປີ</label>
                                     <select name="status" id="status">
-                                        <option value="">--- ເລືອກສິດໃນການເຂົ້າໃຊ້ລະບົບ ---</option>
+                                        <option value="">--- ເລືອກສົກຮຽນປີ ---</option>
                                         <option value="1">2019-2020</option>
                                         <option value="2">2020-2021</option>
                                     </select>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ວັນທີອັບໂຫຼດເອກະສານ</label>
-                                    <input type="text" name="Up_Date" id="Up_Date" placeholder="ລາຍລະອຽດເອກະສານ"
+                                    <input type="date" name="Up_Date" id="Up_Date" placeholder="ລາຍລະອຽດເອກະສານ"
                                         class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -122,7 +122,7 @@
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສົກຮຽນປີ</label>
                                     <select name="status" id="status">
-                                        <option value="">--- ເລືອກສິດໃນການເຂົ້າໃຊ້ລະບົບ ---</option>
+                                        <option value="">--- ເລືອກສົກຮຽນປີ---</option>
                                         <option value="1">2019-2020</option>
                                         <option value="2">2020-2021</option>
                                     </select>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ວັນທີອັບໂຫຼດເອກະສານ</label>
-                                    <input type="text" name="Up_Date_update" id="Up_Date_update" placeholder="ລາຍລະອຽດເອກະສານ"
+                                    <input type="date" name="Up_Date_update" id="Up_Date_update" placeholder="ລາຍລະອຽດເອກະສານ"
                                         class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -183,10 +183,17 @@
     </tr>
    <tr  class="result">
     <td>1</td>
-    <td>hfhhhf</td>
-    <td>2019-2020</td>
-    <td>hfhhhf</td>
-    <td>hfhhhf</td>
+    <td>2020-2021</td>
+    <td>ແຈ້ງການ</td>
+    <td style="display:none;">../../image/unnamed.jpg</td>
+    <td>
+
+<a href="../../image/unnamed.jpg" target="_blank">
+    <img src="../../image/unnamed.jpg" class="img-circle elevation-2" alt="" width="25px">
+</a>
+
+</td>
+    <td>29/9/2020</td>
     <td>
       <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
       <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
