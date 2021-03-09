@@ -3,7 +3,7 @@
   $path = "../";
   $links = "";
   $session_path = "../";
-  include ("../header-footer/header.php");
+  include ("../header-footer/header_supply.php");
 ?>
 <div class="row">
     <a href="<?php echo $links ?>data/faculty" class="m-a">

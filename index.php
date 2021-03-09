@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/vendors/aos/dist/aos.css/aos.css" />
     <link rel="stylesheet" href="./assets/vendors/owl.carousel/dist/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/vendors/owl.carousel/dist/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- End plugin css for this page -->
     <link rel="shortcut icon" href="image/logo.png" />
     <!-- inject:css -->
@@ -25,77 +26,13 @@
 
     <div class="container-scroller">
         <div class="main-panel">
-            <header id="header">
-                <div class="container">
-                    <!-- partial:partials/_navbar.html -->
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <nav class="navbar navbar-inverse">
-                            <div class="navbar-bottom-menu">
-                                <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent"
-                                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+            
+<?php
 
-                                <div class="navbar-collapse justify-content-center collapse"
-                                    id="navbarSupportedContent">
-                                    <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
-                                        <li>
-                                            <button class="navbar-close">
-                                                <i class="mdi mdi-close"></i>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <a class="navbar-brand" href="#"><img src="image/logo.png" alt=""
-                                                    width="70px" height="70px" /></a>
-                                        </li>
-                                        <li class="nav-item active">
-                                            <a class="nav-link active" href="index.php">ໜ້າຫຼັກ</a>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link"
-                                                href="">ພາລະບົດບາດ<b class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="role.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">ນິຕິກຳ<b
-                                                    class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="legislation.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown nav-item">
-                                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">ແຜນປີ<b
-                                                    class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 1</a></li>
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 2</a></li>
-                                                <li><a href="plan.php" class="nav-link">ຫ້ອງການ 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="data.php">ຂໍ້ມູນ</a>
-                                        </li>
-                                        <li class="nav-item"><a href="login.php" class="nav-link">ເຂົ້າ​ສູ່​ລະ​ບົບ</a></li>
-                                        <li class="nav-item">
-                                            <form class="navbar-form form-inline">
-                                                <div class="input-group search-box">
-                                                    <input type="text" id="search" class="form-control"
-                                                        placeholder="ຄົ້ນຫາ...">
-                                                </div>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                </div>
+include ("./navbar.php");
+
+?>
+
                 <!-- container -->
                 <!-- slide -->
                 <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -129,17 +66,17 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2" >
+                            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
                                 <div class="position-relative image-hover">
                                     <img src="image/unnamed.jpg" class="img-fluid" alt="world-news" />
-                                    <span class="thumb-title">                                <span class="fs-10 mr-1">11/01/2021</span></span>
+                                    <span class="thumb-title"> <span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
 
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 1
+                                    ແຈ້ງການ 1
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="pdf.html" class="font-weight-bold text-dark pt-2" target="_blank">ອ່ານຕໍ່</a>
                             </div>
@@ -149,10 +86,10 @@
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 2
+                                    ແຈ້ງການ 2
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
@@ -162,24 +99,23 @@
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 3
+                                    ແຈ້ງການ 3
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
                             <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
                                 <div class="position-relative image-hover">
-                                    <img src="image/unnamed.jpg" class="img-fluid"
-                                        alt="world-news" />
+                                    <img src="image/unnamed.jpg" class="img-fluid" alt="world-news" />
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 4
+                                    ແຈ້ງການ 4
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
@@ -190,10 +126,10 @@
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 5
+                                    ແຈ້ງການ 5
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
@@ -203,10 +139,10 @@
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 6
+                                    ແຈ້ງການ 6
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
@@ -216,38 +152,37 @@
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 7
+                                    ແຈ້ງການ 7
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
                             <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2" style="margin-top:30px">
                                 <div class="position-relative image-hover">
-                                    <img src="image/unnamed.jpg" class="img-fluid"
-                                        alt="world-news" />
+                                    <img src="image/unnamed.jpg" class="img-fluid" alt="world-news" />
                                     <span class="thumb-title"><span class="fs-10 mr-1">11/01/2021</span></span>
                                 </div>
                                 <h5 class="font-weight-bold mt-3">
-                                ແຈ້ງການ 8
+                                    ແຈ້ງການ 8
                                 </h5>
                                 <p class="fs-15 font-weight-normal">
-                                ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
+                                    ພິທີໂອ້ລົມຂອງ ສະຫາຍ ພັນຄຳ ວິພາວັນ ກຳ​ມະ​ການ​ກົມ​ການ​ເມືອງ​ສູນ​ກາງ​ພັກ.
                                 </p>
                                 <a href="#" class="font-weight-bold text-dark pt-2">ອ່ານຕໍ່</a>
                             </div>
                             <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">4</a></li>
-    <li class="page-item"><a class="page-link" href="#">5</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
                         </div>
 
                     </div>
@@ -396,22 +331,22 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- main-panel ends -->
-                <!-- container-scroller ends -->
+                    <!-- main-panel ends -->
+                    <!-- container-scroller ends -->
 
 
-                <!-- partial -->
+                    <!-- partial -->
+                </div>
         </div>
-    </div>
-    <!-- inject:js -->
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- plugin js for this page -->
-    <script src="./assets/vendors/owl.carousel/dist/owl.carousel.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- Custom js for this page-->
-    <script src="./assets/js/demo.js"></script>
-    <!-- End custom js for this page-->
+        <!-- inject:js -->
+        <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- plugin js for this page -->
+        <script src="./assets/vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+        <!-- End plugin js for this page -->
+        <!-- Custom js for this page-->
+        <script src="./assets/js/demo.js"></script>
+        <!-- End custom js for this page-->
 
 </body>
 

@@ -3,7 +3,7 @@
   $path = "../";
   $links = "";
   $session_path = "../";
-  include ("../header-footer/header.php");
+  include ("../header-footer/header_admin.php");
 ?>
 <div class="row">
   <a href="<?php echo $links ?>data/user" class="m-a">
