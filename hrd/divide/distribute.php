@@ -11,7 +11,14 @@
 <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="padding-right: 50px;">
+      <select name="status" id="status" style="padding: 4px 10px 4px 10px;">
+                                        <option value="" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ເລືອກກົມ </option>
+                                        <option value="1">ກົມການສຶກສາຊັ້ນສູງ  - 2020-2021</option>
+                                        <option value="2">ກົມສ້າງຄູ  - 2020-2021</option>
+                                        <option value="3">ກົມອາຊີວະສຶກສາ  - 2020-2021</option>
+                                        <option value="4">ກະຊວງທີ່ມີ   - 2020-2021</option>
+       </select>
+        <!-- <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="padding-right: 50px;">
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ເລືອກກົມ &nbsp
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -19,7 +26,7 @@
           <a class="dropdown-item" href="#">ກົມສ້າງຄູ  - 2020-2021</a>
           <a class="dropdown-item" href="#">ກົມອາຊີວະສຶກສາ  - 2020-2021</a>
           <a class="dropdown-item" href="#">ກະຊວງທີ່ມີ   - 2020-2021</a>
-        </div>
+        </div> -->
       </div>
     </div>
 </div>

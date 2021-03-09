@@ -52,8 +52,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສະຖານະ</label>
-                                    <input type="text" name="Status" id="Status" placeholder="ສະຖານະ"
-                                        class="form-control">
+                                    <select name="status" id="status">
+                                        <option value="">--- ເລືອກສະຖານະ ---</option>
+                                        <option value="1">ເປີດ</option>
+                                        <option value="2">ປິດ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -121,8 +124,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສະຖານະ</label>
-                                    <input type="text" name="Status_update" id="Status_update" placeholder="ສະຖານະ"
-                                        class="form-control">
+                                    <select name="status_update" id="status_update">
+                                        <option value="">--- ເລືອກສະຖານະ---</option>
+                                        <option value="1">ເປີດ</option>
+                                        <option value="2">ປິດ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>

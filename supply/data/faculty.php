@@ -135,8 +135,8 @@
     </tr>
    <tr  class="result">
     <td>1</td>
-    <td>hfhhhf</td>
-    <td>hfhhhf</td>
+    <td>ອຸດສາຫະກຳ</td>
+    <td>ວິທະຍາໄລ ອຸດສາຫະກຳ</td>
     <td></td>
     <td>
       <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 

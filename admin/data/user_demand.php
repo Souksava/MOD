@@ -233,14 +233,14 @@
       </tr>
      <tr  class="result">
       <td>1</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
-      <td>hfhhhf</td>
+      <td>ທ້າວ ສຸກສັນ</td>
+      <td>ສະບາຍມະນີ</td>
+      <td>ຊາຍ</td>
+      <td>02099889999</td>
+      <td>Samvang789@gmail.com</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
       <td>
         <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
         <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>

@@ -138,9 +138,9 @@
     <th></th>
     </tr>
    <tr  class="result">
-    <td>1</td>
-    <td>hfhhhf</td>
-    <td>hfhhhf</td>
+    <td>001</td>
+    <td>ວິທະຍໄລ ສ້າງຄູ</td>
+    <td>ກົມສາມັນສືກສາ</td>
     <td>
       <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
       <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>

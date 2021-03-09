@@ -19,7 +19,7 @@
     </a>
     <a href="<?php echo $links ?>data/user-Supply" class="m-a">
         <div class="btn btn-light mainlink">
-        ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບພະນັກງານ 
+        ຂໍ້ມູນຜູ້ໃຊ້ແຜນຮັບນັກຮຽນ 
         </div>
     </a>
     <a href="<?php echo $links ?>data/user-hrd" class="m-a">
