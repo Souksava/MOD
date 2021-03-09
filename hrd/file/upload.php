@@ -31,7 +31,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນປະເພດສິນຄ້າ</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນອັບໂຫຼດເອກະສານ </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span a ria-hidden="true">&times;</span>
                             </button>
@@ -39,8 +39,45 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຊື່ປະເພດສິນຄ້າ</label>
-                                    <input type="text" name="cate_name" id="cate_name" placeholder="ຊື່ປະເພດສິນຄ້າ"
+                                    <label>ລະຫັດປະເພດເອກະສານ</label>
+                                    <input type="text" name="Doc_ID" id="Doc_ID" placeholder="ລະຫັດປະເພດເອກະສານ"
+                                        class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ສົກຮຽນປີ</label>
+                                    <select name="status" id="status">
+                                        <option value="">--- ເລືອກສິດໃນການເຂົ້າໃຊ້ລະບົບ ---</option>
+                                        <option value="1">2019-2020</option>
+                                        <option value="2">2020-2021</option>
+                                    </select>
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ລາຍລະອຽດເອກະສານ</label>
+                                    <input type="text" name="Description" id="Description" placeholder="ລາຍລະອຽດເອກະສານ"
+                                        class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຮູບໜ້າປົກ</label>
+                                    <input type="file" name="Cover" id="Cover" placeholder="ຮູບໜ້າປົກ">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <img src="../../image/camera.jpg" id="output" width="100%" height="250">
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ວັນທີອັບໂຫຼດເອກະສານ</label>
+                                    <input type="text" name="Up_Date" id="Up_Date" placeholder="ລາຍລະອຽດເອກະສານ"
                                         class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -66,23 +103,59 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນປະເພດເອກະສານ</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="row" align="left">
-                            <div class="col-md-12 col-sm-6 form-control2">
-                                <label>ຊື່ຫົວໜ່ວຍສິນຄ້າ</label>
-                                <input type="hidden" name="cate_id_update" id="cate_id_update"
-                                    placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                <input type="text" name="cate_name_update" id="cate_name_update"
-                                    placeholder="ຊື່ຫົວໜ່ວຍສິນຄ້າ" class="form-control">
-                                <i class="fas fa-check-circle "></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="">Error message</small>
-                            </div>
+                        <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ລະຫັດປະເພດເອກະສານ</label>
+                                    <input type="hidden" name="Up_ID_update" id="Up_ID_update" placeholder="ລະຫັດອັບໂຫຼດ">
+                                    <input type="text" name="Doc_ID_update" id="Doc_ID_update" placeholder="ລະຫັດປະເພດເອກະສານ"
+                                        class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ສົກຮຽນປີ</label>
+                                    <select name="status" id="status">
+                                        <option value="">--- ເລືອກສິດໃນການເຂົ້າໃຊ້ລະບົບ ---</option>
+                                        <option value="1">2019-2020</option>
+                                        <option value="2">2020-2021</option>
+                                    </select>
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ລາຍລະອຽດເອກະສານ</label>
+                                    <input type="text" name="Description_update" id="Description_update" placeholder="ລາຍລະອຽດເອກະສານ"
+                                        class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ຮູບໜ້າປົກ</label>
+                                    <input type="file" name="Cover_update" id="Cover_update" placeholder="ຮູບໜ້າປົກ">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <img src="../../image/camera.jpg" id="output" width="100%" height="250">
+                                </div>
+                                <div class="col-md-12 col-sm-6 form-control2">
+                                    <label>ວັນທີອັບໂຫຼດເອກະສານ</label>
+                                    <input type="text" name="Up_Date_update" id="Up_Date_update" placeholder="ລາຍລະອຽດເອກະສານ"
+                                        class="form-control">
+                                    <i class="fas fa-check-circle "></i>
+                                    <i class="fas fa-exclamation-circle "></i>
+                                    <small class="">Error message</small>
+                                </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -97,7 +170,31 @@
 
 
     <div class="clearfix"></div><br>
-    <div id="result"></div>
+    <div id="result">
+    <div class="table-responsive">
+   <table class="table font12" style="width: 1500px;">
+    <tr>
+    <th>ລະຫັດປະເພດເອກະສານ</th>
+    <th>ສົກຮຽນປີ</th>
+    <th>ລາຍລະອຽດເອກະສານ</th>
+    <th>ຮູບໜ້າປົກ</th>
+    <th>ວັນທີອັບໂຫຼດເອກະສານ</th>
+    <th></th>
+    </tr>
+   <tr  class="result">
+    <td>1</td>
+    <td>hfhhhf</td>
+    <td>2019-2020</td>
+    <td>hfhhhf</td>
+    <td>hfhhhf</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
+   </table>
+</div>
+</div>
 
 
     <form action="category" id="formDelete" method="POST" enctype="multipart/form-data">
