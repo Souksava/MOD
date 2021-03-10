@@ -55,7 +55,7 @@
                                     <select name="status" id="status">
                                         <option value="">--- ເລືອກສະຖານະ ---</option>
                                         <option value="1">ເປີດ</option>
-                                        <option value="2">ປິດ</option>
+                                        <option value="2">&nbspປິດ</option>
                                     </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>

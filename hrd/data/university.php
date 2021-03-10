@@ -130,7 +130,7 @@
 </div>
 <div class="clearfix"></div><br>
 <div id="result">
-<table class="table font12" style="width: 1500px;">
+<table class="table font12" style="width: 1000px;">
     <tr>
     <th>ລະຫັດວິທະຍາໄລ</th>
     <th>ຊື່ວິທະຍາໄລ</th>

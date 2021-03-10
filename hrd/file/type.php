@@ -100,7 +100,7 @@
 <div class="clearfix"></div><br>
 <div id="result">
 <div class="table-responsive">
-   <table class="table font12" style="width: 1500px;">
+   <table class="table font12" style="width: 1000px;">
     <tr>
     <th>ລະຫັດປະເພດເອກະສານ</th>
     <th>ຊື່ປະເພດເອກະສານ</th>
