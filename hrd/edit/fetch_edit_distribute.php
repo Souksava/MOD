@@ -12,7 +12,7 @@
   </div>
   <div class="col-md-6" style="text-align:right;">
     <button type="button" class="btn btn-sm btn-primary"><span class="fa fa-paper-plane"> &nbsp&nbsp
-    </span>ແຈກຢາຍທຶນການສຶກສາ</button>
+    </span>ແກ້ໄຂແຈກຢາຍທຶນການສຶກສາ</button>
   </div>
 </div>
 <div class="table-responsive2">
@@ -38,12 +38,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -63,12 +61,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -87,12 +83,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -111,12 +105,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -135,12 +127,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -159,12 +149,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -183,12 +171,10 @@
         echo'
         <td style="text-align:center">
                       <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                          <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                              class="minus"></button>
+
                           <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                               style="font-weight:bold!important;">
-                          <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                              class="plus"></button>
+
                       </div>
                   </td>
         ';
@@ -207,12 +193,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -231,12 +215,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -255,12 +237,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -279,12 +259,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -303,12 +281,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -327,12 +303,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -351,12 +325,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -375,12 +347,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -399,12 +369,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -423,12 +391,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -447,12 +413,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -471,12 +435,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -495,12 +457,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -519,12 +479,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';
@@ -543,12 +501,10 @@
       echo'
       <td style="text-align:center">
                     <div class="def-number-input number-input safari_only" style="margin:0 auto;">
-                        <button  onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepDown()"
-                            class="minus"></button>
+
                         <input class="quantity" min="0" name="num1" id="num1" value="0" type="number"
                             style="font-weight:bold!important;">
-                        <button onclick="this.parentNode.querySelector(';echo"'input[type=number]'";echo').stepUp()"
-                            class="plus"></button>
+
                     </div>
                 </td>
       ';

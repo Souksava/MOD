@@ -44,14 +44,16 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
+                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ"
+                                        class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_Name" id="Dept_Name" placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                                    <input type="text" name="Dept_Name" id="Dept_Name" placeholder="ຊື່ກົມການສຶກສາ"
+                                        class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -86,8 +88,8 @@
                                     <label>ລະຫັດກົມການສຶກສາ</label>
                                     <input type="hidden" name="cate_id_update" id="cate_id_update"
                                         placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                    <input type="text" name="Dept_ID" id="Dept_ID"
-                                        placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
+                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ"
+                                        class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
@@ -117,23 +119,25 @@
 <div class="clearfix"></div><br>
 <div id="result">
 
-<div class="table-responsive">
-   <table class="table font12" style="width: 1500px;">
-    <tr>
-    <th>ລະຫັດກົມການສຶກສາ</th>
-    <th>ຊື່ກົມການສຶກສາ</th>
-    <th></th>
-    </tr>
-   <tr  class="result">
-    <td>1</td>
-    <td>ກົມສາມັນສືກສາ</td>
-    <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
-    </td>
-   </tr>
-   </table>
-</div>
+    <div class="table-responsive">
+        <table class="table font12" style="width: 1500px;">
+            <tr>
+                <th>ລະຫັດກົມການສຶກສາ</th>
+                <th>ຊື່ກົມການສຶກສາ</th>
+                <th></th>
+            </tr>
+            <tr class="result">
+                <td>1</td>
+                <td>ກົມສາມັນສືກສາ</td>
+                <td>
+                    <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                        class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp;
+                    <a href="#" data-toggle="modal" data-target="#exampleModalDelete"
+                        class="fa fa-trash toolcolor btnDelete_cate"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </div>
 
@@ -265,49 +269,43 @@ function checkInputsUpdate() {
 ?>
 
 <script>
-$(document).ready(function(){
+$(document).ready(function() {
 
-  load_data("%%","0");
+    load_data("%%", "0");
 
-  function load_data(query,page)
-  {
-    $.ajax({
-      url:"fetch_category.php",
-      method:"POST",
-      data:{query:query,page:page},
-      success:function(data)
-      {
-        $('#result').html(data);
-      }
+    function load_data(query, page) {
+        $.ajax({
+            url: "fetch_category.php",
+            method: "POST",
+            data: {
+                query: query,
+                page: page
+            },
+            success: function(data) {
+                $('#result').html(data);
+            }
+        });
+    }
+    $('#search').keyup(function() {
+        var page = "0";
+        var search = $(this).val();
+        if (search != '') {
+            load_data(search, page);
+        } else {
+            load_data('%%', page);
+        }
     });
-  }
-  $('#search').keyup(function(){
-    var page = "0";
-    var search = $(this).val();
-    if(search != '')
-    {
-    load_data(search,page);
-    }
-    else
-    {
-      load_data('%%',page);
-    }
-  });
-  $(document).on('click', '.page-links', function(){    
-    var page = this.id;
-    console.log(page);
-    var search = $('#search').val();
-    if(search != '')
-    {
-      load_data(search,page);
-    }
-    else
-    {
-      load_data('%%',page);
-    }
-  });
+    $(document).on('click', '.page-links', function() {
+        var page = this.id;
+        console.log(page);
+        var search = $('#search').val();
+        if (search != '') {
+            load_data(search, page);
+        } else {
+            load_data('%%', page);
+        }
+    });
 });
-
 </script>
 
 
