@@ -142,6 +142,30 @@
       <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
     </td>
    </tr>
+   <td>2</td>
+    <td>ສາຂາອຸດສາຫະກຳ</td>
+    <td>ກະສີກອນສາດ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
+   <td>3</td>
+    <td>ສາຂາອຸດສາຫະກຳ</td>
+    <td>ກະສີກອນສາດ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
+   <td>4</td>
+    <td>ສາຂາອຸດສາຫະກຳ</td>
+    <td>ກະສີກອນສາດ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
    </table>
 </div>
 </div>

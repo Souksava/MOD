@@ -86,10 +86,8 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="hidden" name="cate_id_update" id="cate_id_update"
-                                        placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ"
-                                        class="form-control">
+                                    <input type="text" name="Dept_ID_update" id="Dept_ID_update"
+                                        placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
@@ -119,25 +117,30 @@
 <div class="clearfix"></div><br>
 <div id="result">
 
-    <div class="table-responsive">
-        <table class="table font12" style="width: 1500px;">
-            <tr>
-                <th>ລະຫັດກົມການສຶກສາ</th>
-                <th>ຊື່ກົມການສຶກສາ</th>
-                <th></th>
-            </tr>
-            <tr class="result">
-                <td>1</td>
-                <td>ກົມສາມັນສືກສາ</td>
-                <td>
-                    <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp;
-                    <a href="#" data-toggle="modal" data-target="#exampleModalDelete"
-                        class="fa fa-trash toolcolor btnDelete_cate"></a>
-                </td>
-            </tr>
-        </table>
-    </div>
+<div class="table-responsive">
+   <table class="table font12" style="width: 1000px;">
+    <tr>
+    <th>ລະຫັດກົມການສຶກສາ</th>
+    <th>ຊື່ກົມການສຶກສາ</th>
+    <th></th>
+    </tr>
+   <tr  class="result">
+    <td>1</td>
+    <td>ກົມ ກ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_group"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_group"></a>
+    </td>
+   </tr>
+   <td>2</td>
+    <td>ກົມ ຂ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_group"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_group"></a>
+    </td>
+   </tr>
+   </table>
+</div>
 
 </div>
 
@@ -306,6 +309,33 @@ $(document).ready(function() {
         }
     });
 });
+
+$('.btnDelete_group').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    
+    $('.btnUpdate_group').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Dept_ID_update').val(data[0]);
+        $('#Dept_Name_update').val(data[1]);
+
+    });
+
 </script>
 
 

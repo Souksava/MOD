@@ -77,7 +77,7 @@
                                     <label>ຊື່ປະເພດເອກະສານ</label>
                                     <input type="hidden" name="Doc_ID_update" id="Doc_ID_update"
                                         placeholder="ລະຫັດປະເພດເອກະສານ">
-                                    <input type="text" name="Doc_Name" id="Doc_Name"
+                                    <input type="text" name="Doc_Name_update" id="Doc_Name_update"
                                         placeholder="ຊື່ປະເພດເອກະສານ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -100,7 +100,7 @@
 <div class="clearfix"></div><br>
 <div id="result">
 <div class="table-responsive">
-   <table class="table font12" style="width: 1500px;">
+   <table class="table font12" style="width: 1000px;">
     <tr>
     <th>ລະຫັດປະເພດເອກະສານ</th>
     <th>ຊື່ປະເພດເອກະສານ</th>
@@ -110,8 +110,15 @@
     <td>1</td>
     <td>ເອກະສານສັງລວມ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_type"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_type"></a>
+    </td>
+   </tr>
+   <td>2</td>
+    <td>ເອກະສານສັງລວມ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_type"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_type"></a>
     </td>
    </tr>
    </table>
@@ -289,6 +296,31 @@ $(document).ready(function(){
   });
 });
 
+$('.btnDelete_type').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    
+    $('.btnUpdate_type').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Doc_ID_update').val(data[0]);
+        $('#Doc_Name_update').val(data[1]);
+
+    });
 </script>
 
 

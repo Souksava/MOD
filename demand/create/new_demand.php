@@ -4,7 +4,7 @@
   $links = "../";
   $session_path = "../../";
   include ("../../header-footer/header_demand.php");
-  $conn = mysqli_connect("Localhost", "root", "", "test");
+  $conn = mysqli_connect("Localhost", "root", "12345678", "test");
 ?>
 
 

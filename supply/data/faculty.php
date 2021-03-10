@@ -125,7 +125,7 @@
 </div>
 <div class="clearfix"></div><br>
 <div id="result">
-<table class="table font12" style="width: 1500px;">
+<table class="table font12" style="width: 1000px;">
     <tr>
     <th>ລະຫັດຄະນະ</th>
     <th>ຊື່ຄະນະ</th>
@@ -136,6 +136,15 @@
    <tr  class="result">
     <td>1</td>
     <td>ອຸດສາຫະກຳ</td>
+    <td>ວິທະຍາໄລ ອຸດສາຫະກຳ</td>
+    <td></td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+    </td>
+   </tr>
+   <td>2</td>
+    <td>ກະສີກຳ</td>
     <td>ວິທະຍາໄລ ອຸດສາຫະກຳ</td>
     <td></td>
     <td>

@@ -53,9 +53,9 @@
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສະຖານະ</label>
                                     <select name="status" id="status">
-                                        <option value="">--- ເລືອກສະຖານະ ---</option>
-                                        <option value="1">ເປີດ</option>
-                                        <option value="2">ປິດ</option>
+                                        <option value="">ເລືອກສະຖານະ</option>
+                                        <option value="ເປີດ">ເປີດ</option>
+                                        <option value="&nbspປິດ">&nbspປິດ</option>
                                     </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -125,9 +125,9 @@
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສະຖານະ</label>
                                     <select name="status_update" id="status_update">
-                                        <option value="">--- ເລືອກສະຖານະ---</option>
-                                        <option value="1">ເປີດ</option>
-                                        <option value="2">ປິດ</option>
+                                        <option value="">ເລືອກສະຖານະ</option>
+                                        <option value="ເປີດ">ເປີດ</option>
+                                        <option value="ປິດ">ປິດ</option>
                                     </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -172,7 +172,7 @@
                 <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
                 <td style="text-align:center">ເປີດ</td>
                 <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_rate"></a></td>
+                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
             </tr>
             <tr>
                 <td style="text-align:center">2</td>
@@ -180,7 +180,7 @@
                 <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
                 <td style="text-align:center">ເປີດ</td>
                 <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_rate"></a></td>
+                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
             </tr>
             <tr>
                 <td style="text-align:center">3</td>
@@ -188,7 +188,7 @@
                 <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
                 <td style="text-align:center">ປີດ</td>
                 <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_rate"></a></td>
+                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
             </tr>
             <tr>
                 <td style="text-align:center">4</td>
@@ -196,7 +196,7 @@
                 <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
                 <td style="text-align:center">ປີດ</td>
                 <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_rate"></a></td>
+                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
             </tr>
             <tr>
                 <td style="text-align:center">5</td>
@@ -204,7 +204,7 @@
                 <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
                 <td style="text-align:center">ປີດ</td>
                 <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_rate"></a></td>
+                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
             </tr>
         </table>
     </div>
@@ -284,6 +284,34 @@ $(document).ready(function() {
         });
     $('tr[@class^=child-]').hide().children('td');
 });
+
+$('.btnDelete_year').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    $('.btnUpdate_year').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#cate_id_update').val(data[0]);
+        $('#Fy_ID_update').val(data[1]);
+        $('#File_update').val(data[2]);
+        $('#status_update').val(data[3]);
+        $('#Up_Date_update').val(data[4]);
+     
+    });
 </script>
 
 
