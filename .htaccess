@@ -22,8 +22,8 @@ RewriteRule ^hrd/report/report-hrd?$ hrd/report/report_hrd.php
 RewriteRule ^demand/index?$ demand/index.php
 RewriteRule ^demand/main?$ demand/main.php
 RewriteRule ^demand/create/new-demand?$ demand/create/new_demand.php
-RewriteRule ^demand/report/report-demand?$ demand/create/report_demand.php
-RewriteRule ^demand/report/report-hrd?$ demand/create/report_hrd.php
+RewriteRule ^demand/report/report-demand?$ demand/report/report_demand.php
+RewriteRule ^demand/report/report-hrd?$ demand/report/report_hrd.php
 
 ## supply
 RewriteRule ^supply/index?$ supply/index.php
@@ -31,8 +31,8 @@ RewriteRule ^supply/main?$ supply/main.php
 RewriteRule ^supply/create/new-supply?$ supply/create/new_supply.php
 RewriteRule ^supply/data/faculty?$ supply/data/faculty.php
 RewriteRule ^supply/data/course?$ supply/data/course.php
-RewriteRule ^supply/report/report-supply?$ supply/create/report_supply.php
-RewriteRule ^supply/report/report-hrd?$ supply/create/report_hrd.php
+RewriteRule ^supply/report/report-supply?$ supply/report/report_supply.php
+RewriteRule ^supply/report/report-hrd?$ supply/report/report_hrd.php
 
 ## admin
 RewriteRule ^admin/index?$ admin/index.php
