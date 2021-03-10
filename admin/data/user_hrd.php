@@ -180,10 +180,10 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ຜູ້ໃຊ້</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກຜູ້ໃຊ້ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                      <select name="User_ID_update" id="User_ID_update">
+                                        <option value="">ເລືອກຜູ້ໃຊ້</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -191,10 +191,10 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ວິທະຍາໄລ</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກວິທະຍາໄລ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                      <select name="Uni_ID_update" id="Uni_ID_update">
+                                        <option value="">ເລືອກວິທະຍາໄລ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -240,10 +240,24 @@
       <td>Saonoi789@gmail.com</td>
       <td>TG001</td>
       <td>1</td>
-      <td>ວິທະຍາໄລ ປາສັກ</td>
+      <td>ກ</td>
       <td>
-        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_userhrd"></a>&nbsp; &nbsp; 
+        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_userhrd"></a>
+      </td>
+     </tr>
+     <td>2</td>
+      <td>ນາງ ສາວນ້ອຍ</td>
+      <td>ຫ້ອມກີນແກ້ວ</td>
+      <td>ຍີ່ງ</td>
+      <td>02099009977</td>
+      <td>Saonoi789@gmail.com</td>
+      <td>TG001</td>
+      <td>1</td>
+      <td>ກ</td>
+      <td>
+        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_userhrd"></a>&nbsp; &nbsp; 
+        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_userhrd"></a>
       </td>
      </tr>
      </table>
@@ -420,7 +434,41 @@
         load_data('%%',page);
       }
     });
+
   });
+  $('.btnDelete_userhrd').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    $('.btnUpdate_userhrd').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#HRD_ID_update').val(data[0]);
+        $('#HRD_Name_update').val(data[1]);
+        $('#Surname_update').val(data[2]);
+        $('#Gender_update').val(data[3]);
+        $('#Tel_update').val(data[4]);
+        $('#Email_update').val(data[5]);
+        $('#Pass_update').val(data[6]);
+        $('#User_ID_update').val(data[7]);
+        $('#Uni_ID_update').val(data[8]);
+
+     
+    });
+  
   
   </script>
   

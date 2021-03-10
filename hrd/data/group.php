@@ -84,9 +84,7 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="hidden" name="cate_id_update" id="cate_id_update"
-                                        placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                    <input type="text" name="Dept_ID" id="Dept_ID"
+                                    <input type="text" name="Dept_ID_update" id="Dept_ID_update"
                                         placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -126,10 +124,17 @@
     </tr>
    <tr  class="result">
     <td>1</td>
-    <td>ກົມສາມັນສືກສາ</td>
+    <td>ກົມ ກ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_group"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_group"></a>
+    </td>
+   </tr>
+   <td>2</td>
+    <td>ກົມ ຂ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_group"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_group"></a>
     </td>
    </tr>
    </table>
@@ -307,6 +312,32 @@ $(document).ready(function(){
     }
   });
 });
+
+$('.btnDelete_group').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    
+    $('.btnUpdate_group').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Dept_ID_update').val(data[0]);
+        $('#Dept_Name_update').val(data[1]);
+
+    });
 
 </script>
 

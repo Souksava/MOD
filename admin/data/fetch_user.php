@@ -30,17 +30,8 @@ if(mysqli_num_rows($resultemployee) > 0)
   <div class="table-responsive">
    <table class="table font12" style="width: 1500px;">
     <tr>
-        <th>ລະຫັດ</th>
-        <th>ຊື່ພະນັກງານ</th>
-        <th>ນາມສະກຸນ</th>
-        <th>ເພດ</th>
-        <th>ເບີໂທລະສັບ</th>
-        <th>ທີ່ຢູ່ປັດຈຸບັນ</th>
-        <th>ຕຳແໜ່ງ</th>
-        <th>ທີ່ຢູ່ອີເມວ</th>
-        <th>ລະຫັດເຂົ້າໃຊ້ລະບົບ</th>
-        <th>ສິດເຂົ້າໃຊ້ລະບົບ</th>
-        <th>ຮູບພາບ</th>
+        <th>ລະຫັດຜູ້ໃຊ້</th>
+        <th>ສະຖານະຜູ້ໃຊ້ລະບົບ</th>
         <th></th>
     </tr>
  ';
@@ -48,16 +39,10 @@ if(mysqli_num_rows($resultemployee) > 0)
  {
   $output .= '
    <tr  class="result">
-    <td>'.$row["emp_id"].'</td>
-    <td>'.$row["emp_name"].'</td>
-    <td>'.$row["emp_surname"].'</td>
-    <td>'.$row["gender"].'</td>
-    <td>'.$row["tel"].'</td>
-    <td>'.$row["address"].'</td>
+    <td>'.$row["User_ID"].'</td>
+    <td>'.$row["Stt_ID"].'</td>
     <td style="display: none;">'.$row["auther_id"].'</td>
     <td>'.$row["auther_name"].'</td>
-    <td>'.$row["email"].'</td>
-    <td>'.$row["pass"].'</td>
     <td style="display: none;">'.$row["stt_id"].'</td>
     <td>'.$row["stt_name"].'</td>
     <td style="display: none;">'.$row["img_path"].'</td>

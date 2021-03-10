@@ -90,26 +90,27 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດວິທະຍາໄລ</label>
-                                    <input type="hidden" name="Uni_ID_update" id="Uni_ID_update"
-                                        placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                                    <input type="text" name="Uni_ID_update" id="Uni_ID_update"
+                                    <input type="text" name="CC_update" id="CC_update"
                                         placeholder="ລະຫັດວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ກົມການສຶກສາ</label>
+                                    <label>ຊື່ວິທະຍາໄລ</label>
                                     <input type="text" name="Dept_ID_update" id="Dept_ID_update"
-                                        placeholder="ກົມການສຶກສາ" class="form-control">
+                                        placeholder="ຊື່ວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຊື່ກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_Name_update" id="Dept_Name_update"
-                                        placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                                    <label>ລະຫັດກົມການສຶກສາ</label>
+                                    <select name="Fy_ID_update" id="Fy_ID_update">
+                                <option value="">ເລືອກລະຫັດກົມການສຶກສາ</option>
+                                <option value="ກ">ກ</option>
+                                <option value="ຂ">ຂ</option>
+                                  </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
@@ -138,12 +139,20 @@
     <th></th>
     </tr>
    <tr  class="result">
-    <td>001</td>
-    <td>ວິທະຍໄລ ສ້າງຄູ</td>
-    <td>ກົມສາມັນສືກສາ</td>
+    <td>1</td>
+    <td>ສ້າງຄູ</td>
+    <td>ກ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_University"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_University"></a>
+    </td>
+   </tr>
+   <td>2</td>
+    <td>ສ້າງຄູ</td>
+    <td>ຂ</td>
+    <td>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_University"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_University"></a>
     </td>
    </tr>
    </table>
@@ -319,6 +328,33 @@ $(document).ready(function(){
     }
   });
 });
+
+$('.btnDelete_University').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    
+    $('.btnUpdate_University').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#CC_update').val(data[0]);
+        $('#Uni_Name_update').val(data[1]);
+        $('#Dept_ID_update').val(data[2]);
+
+    });
 
 </script>
 

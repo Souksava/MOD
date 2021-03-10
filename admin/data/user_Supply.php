@@ -87,22 +87,22 @@
                                       <small class="">Error message</small>
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
-                                      <label>ຜູ້ໃຊ້</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກຜູ້ໃຊ້ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                      <label>ລະຫັດຜູ້ໃຊ້</label>
+                                      <select name="User_ID" id="User_ID">
+                                        <option value="">ລະຫັດຜູ້ໃຊ້</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
                                       <small class="">Error message</small>
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
-                                      <label>ວິທະຍາໄລ</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກວິທະຍາໄລ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                      <label>ລະຫັດວິທະຍາໄລ</label>
+                                      <select name="Uni_ID" id="Uni_ID">
+                                        <option value="">ເລືອກລະຫັດວິທະຍາໄລ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -180,10 +180,10 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ຜູ້ໃຊ້</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກຜູ້ໃຊ້ ---</option>
-                                        <option value="1">001</option>
-                                        <option value="2">002</option>
+                                      <select name="User_ID_update" id="User_ID_update">
+                                        <option value="" disabled selected>ເລືອກຜູ້ໃຊ້</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -191,10 +191,10 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ວິທະຍາໄລ</label>
-                                      <select name="status" id="status">
-                                        <option value="">--- ເລືອກວິທະຍາໄລ ---</option>
-                                        <option value="1">ກ</option>
-                                        <option value="2">ຂ</option>
+                                      <select name="Uni_ID_update" id="Uni_ID_update">
+                                        <option value="" disabled selected>ເລືອກວິທະຍາໄລ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
                                     </select>
                                       <i class="fas fa-check-circle "></i>
                                       <i class="fas fa-exclamation-circle "></i>
@@ -235,15 +235,29 @@
       <td>1</td>
       <td>ທ້າວ ສຸກສະຫວັນ</td>
       <td>ສົມໃຈ</td>
-      <td>ຍີ່ງ</td>
+      <td>ຊາຍ</td>
       <td>02078883344</td>
       <td>Pokky89@gmail.com</td>
       <td>TG001</td>
       <td>1</td>
-      <td>ວິທະຍາໄລ ກຳມະສາດ</td>
+      <td>ກ</td>
       <td>
-        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_Supply"></a>&nbsp; &nbsp; 
+        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_Supply"></a>
+      </td>
+     </tr>
+     <td>2</td>
+      <td>ນາງ ມະນີທອງ</td>
+      <td>ຫ້ອມໃຈ</td>
+      <td>ຍີ່ງ</td>
+      <td>02078883344</td>
+      <td>Pokky89@gmail.com</td>
+      <td>TG002</td>
+      <td>1</td>
+      <td>ກ</td>
+      <td>
+        <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_Supply"></a>&nbsp; &nbsp; 
+        <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_Supply"></a>
       </td>
      </tr>
      </table>
@@ -421,6 +435,39 @@
       }
     });
   });
+
+  $('.btnDelete_Supply').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    $('.btnUpdate_Supply').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Supply_ID_update').val(data[0]);
+        $('#Supply_Name_update').val(data[1]);
+        $('#Surname_update').val(data[2]);
+        $('#Gender_update').val(data[3]);
+        $('#Tel_update').val(data[4]);
+        $('#Email_update').val(data[5]);
+        $('#Pass_update').val(data[6]);
+        $('#User_ID_update').val(data[7]);
+        $('#Uni_ID_update').val(data[8]);
+
+     
+    });
   
   </script>
   
