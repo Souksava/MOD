@@ -4,7 +4,7 @@
   $links = "../";
   $session_path = "../../";
   include ("../../header-footer/header_demand.php");
-  $conn = mysqli_connect("Localhost", "root", "", "test");
+  $conn = mysqli_connect("Localhost", "root", "12345678", "test");
 ?>
 
 
@@ -35,30 +35,9 @@ table {
         </div>
 
 
-<<<<<<< HEAD
-        <div class="col-xs-12 col-md-6 dropdown">
-
-        <select name="status" id="status" style="padding: 8px 10px 4px 10px;">
-                                        <option value="" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ເລືອກກົມ </option>
-                                        <option value="1">ກົມການສຶກສາຊັ້ນສູງ  - 2020-2021</option>
-                                        <option value="2">ກົມສ້າງຄູ  - 2020-2021</option>
-                                        <option value="3">ກົມອາຊີວະສຶກສາ  - 2020-2021</option>
-                                        <option value="4">ກະຊວງທີ່ມີ   - 2020-2021</option>
-       </select>
-            <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                ເລືອກກົມ
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກົມສ້າງຄູ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກົມອາຊີວະສຶກສາ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກະຊວງທີ່ມີ - 2020-2021</a>
-            </div> -->
-=======
         <div class="col-xs-12 col-md-3 dropdown">
 
-            <select name="status" id="status" style="padding: 4px 10px 4px 10px;" class="form-control">
+            <select name="status" id="status" style="width: 250px" class="form-control">
                 <option value="" disabled selected>ເລືອກກົມ </option>
                 <option value="1">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</option>
                 <option value="2">ກົມສ້າງຄູ - 2020-2021</option>
@@ -66,7 +45,6 @@ table {
                 <option value="4">ກະຊວງທີ່ມີ - 2020-2021</option>
             </select>
 
->>>>>>> d68c043612de3607a89fa59303a2c3ba18dbe068
         </div>
     </div>
     <br>

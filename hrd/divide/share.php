@@ -11,7 +11,7 @@
 <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="dropdown">
-      <select name="status" id="status" style="padding: 4px 10px 4px 10px;">
+      <select name="status" id="status" style="padding: 4px 10px 6px 10px;">
                                         <option value="" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ເລືອກກົມ </option>
                                         <option value="1">ກົມການສຶກສາຊັ້ນສູງ  - 2020-2021</option>
                                         <option value="2">ກົມສ້າງຄູ  - 2020-2021</option>

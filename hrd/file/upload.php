@@ -39,7 +39,7 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດປະເພດເອກະສານ</label>
+                                    <label>ລະຫັດເອກະສານ</label>
                                     <input type="hidden" name="Up_ID" id="Up_ID" placeholder="ລະຫັດອັບໂຫຼດ">
                                     <input type="text" name="Doc_ID" id="Doc_ID" placeholder="ລະຫັດປະເພດເອກະສານ">
                                     <i class="fas fa-check-circle "></i>
@@ -95,7 +95,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນປະເພດເອກະສານ</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນອັບໂຫຼດເອກະສານ</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

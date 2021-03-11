@@ -1,10 +1,10 @@
 <?php
-  $title = "ສ້າງແຜນຮັບນັກຮຽນ";
+  $title = "ແກ້ໄຂແຜນຮັບນັກຮຽນ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
   include ("../../header-footer/header_admin.php");
-  $conn = mysqli_connect("Localhost", "root", "", "test");
+  $conn = mysqli_connect("Localhost", "root", "12345678", "test");
 ?>
 
 
