@@ -4,7 +4,7 @@
   $links = "../";
   $session_path = "../../";
   include ("../../header-footer/header_admin.php");
-  $conn = mysqli_connect("Localhost", "root", "12345678", "test");
+  $conn = mysqli_connect("Localhost", "root", "", "test");
 ?>
 
 
@@ -23,7 +23,7 @@ table {
 <form action="senddemand.php" target="_blank" method="Post">
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <h2>ແກ້ໄຂແຜນຮັບ</h2>
+            <h2>ແກ້ໄຂແຜນຮັບນັກຮຽນ</h2>
             <h5>ກະລຸນາປ້ອນຈຳນວນຮອງຮັບນັກຮຽນໃນສາຖາບັນຂອງທ່ານ</h5>
         </div>
         <div class="col-xs-12 col-md-6" align="right">

@@ -1,5 +1,5 @@
 <?php
-  $title = "ຄັດຕິດເອກະສານ";
+  $title = "ເປີດສົກຮຽນ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
@@ -21,7 +21,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນຄັດຕິດເອກະສານ</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນເປີດສົກຮຽນ</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span a ria-hidden="true">&times;</span>
                             </button>
@@ -92,7 +92,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນຕິດຄັດເອກະສານ</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂຂໍ້ມູນເປີດສົກຮຽນ</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

@@ -8,7 +8,7 @@
 <div class="row">
     <a href="<?php echo $links ?>create/new-demand" class="m-a">
         <div class="btn btn-light mainlink">
-            ສະເໜີແຜນສ້າງ
+            ສະເໜີແຜນສ້າງນັກຮຽນ
         </div>
     </a>
     <a href="<?php echo $links ?>edit/edit-demand" class="m-a">

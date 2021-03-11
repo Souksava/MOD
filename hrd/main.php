@@ -33,12 +33,12 @@
     </a>
     <a href="<?php echo $links ?>divide/share" class="m-a">
         <div class="btn btn-light mainlink">
-            ແບ່ງປັນທຶນ
+            ແບ່ງປັນທຶນການສຶກສາ
         </div>
     </a>
     <a href="<?php echo $links ?>divide/distribute" class="m-a">
         <div class="btn btn-light mainlink">
-            ແຈກຢາຍທິນ
+            ແຈກຢາຍທິນການສຶກສາ
         </div>
     </a>
     <a href="<?php echo $links ?>edit/edit-share" class="m-a">
