@@ -7,19 +7,18 @@
 ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-6 col-md-3">
         <div class="dropdown">
-
-            <select name="status" id="status" style="padding: 4px 10px 4px 10px;">
-                <option value="">
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    ເລືອກກົມ </option>
+        <select name="status" id="status" style="width:250px" class="form-control">
+                <option value="" disabled selected>ເລືອກກົມ </option>
                 <option value="1">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</option>
                 <option value="2">ກົມສ້າງຄູ - 2020-2021</option>
                 <option value="3">ກົມອາຊີວະສຶກສາ - 2020-2021</option>
                 <option value="4">ກະຊວງທີ່ມີ - 2020-2021</option>
             </select>
-            <!-- <button  class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-right: 50px;">
+        </div>
+    </div>
+    <!-- <button  class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-right: 50px;">
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ເລືອກກົມ &nbsp
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -28,13 +27,13 @@
           <a class="dropdown-item" href="#">ກົມອາຊີວະສຶກສາ  - 2020-2021</a>
           <a class="dropdown-item" href="#">ກະຊວງທີ່ມີ   - 2020-2021</a>
         </div> -->
-            <button type="button" class="btn btn-sm btn-primary"><span class="fa fa-paper-plane"> &nbsp&nbsp
-                </span>ແກ້ໄຂແບ່ງປັນທຶນການສຶກສາ</button>
-        </div>
-    </div>
+
 </div>
+
+
+
 <br>
-<div class="table-responsive">
+<div class="table-responsive table-edit">
     <table id="detail_table" class="table-bordered" style="width: 3000px;">
         <tr>
             <th rowspan="2" style="text-align: center!important;margin: 0 auto;">ລຳດັບ</th>
@@ -65,7 +64,7 @@
         <tr style="background-color:#5199FA;color:white;">
             <td colspan="2" style="text-align:center;">ມະຫາວິທະຍາໄລແຫ່ງຊາດ</td>
             <td style="text-align:center">
-              100
+                100
             </td>
             <?php for ($x = 0; $x <= 15; $x++) {
             echo '           <td style="text-align:center">
@@ -81,7 +80,7 @@
             </td>
             <td>ຄະນະສຶກສາສາດ</td>
             <td style="text-align:center">
-30
+                30
             </td>
             <?php for ($x = 0; $x <= 15; $x++) {
             echo '           <td style="text-align:center">
@@ -97,10 +96,10 @@
             <td style="display:none">1</td>
             <td style="padding-left:50px;">ຄູຈິດຕະສຶກສາສາດ</td>
             <td style="text-align:center">
-10
+                10
             </td>
             <td style="text-align:center">
-300
+                300
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
               echo'  <td style="text-align:center">
@@ -113,10 +112,10 @@
             <td style="display:none">2</td>
             <td style="padding-left:50px;">ບໍລິຫານການສຶກສາ</td>
             <td style="text-align:center">
-10
+                10
             </td>
             <td style="text-align:center">
-0
+                0
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -129,10 +128,10 @@
             <td style="display:none">3</td>
             <td style="padding-left:50px;">ຄູຄະນິດສາດ</td>
             <td style="text-align:center">
-10
+                10
             </td>
             <td style="text-align:center">
-0
+                0
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -149,10 +148,10 @@
             </td>
             <td>ຄະນະອັກສອນສາດ</td>
             <td style="text-align:center">
-40
+                40
             </td>
             <td style="text-align:center">
-40
+                40
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '           <td style="text-align:center">
@@ -167,10 +166,10 @@
             <td style="display:none">4</td>
             <td style="padding-left:50px;">ພາສາລາວ-ວັນນະຄະດີ</td>
             <td style="text-align:center">
-15
+                15
             </td>
             <td style="text-align:center">
-12
+                12
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -184,10 +183,10 @@
             <td style="display:none">5</td>
             <td style="padding-left:50px;">ພາສາຝຣັ່ງ</td>
             <td style="text-align:center">
-15
+                15
             </td>
             <td style="text-align:center">
-15
+                15
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -201,10 +200,10 @@
             <td style="display:none">6</td>
             <td style="padding-left:50px;">ພາສາອັງກິດ</td>
             <td style="text-align:center">
-10
+                10
             </td>
             <td style="text-align:center">
-14
+                14
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -220,10 +219,10 @@
             </td>
             <td>ຄະນະວິທະຍາສາດສັງຄົມ</td>
             <td style="text-align:center">
-30
+                30
             </td>
             <td style="text-align:center">
-40
+                40
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '           <td style="text-align:center">
@@ -239,10 +238,10 @@
             <td style="display:none">7</td>
             <td style="padding-left:50px;">ປະຫວັດສາດ ແລະ ມະນຸດວິທະຍາ</td>
             <td style="text-align:center">
-23
+                23
             </td>
             <td style="text-align:center">
-12
+                12
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -256,10 +255,10 @@
             <td style="display:none">8</td>
             <td style="padding-left:50px;">ສັງຄົມສົງເຄາະ</td>
             <td style="text-align:center">
-12
+                12
             </td>
             <td style="text-align:center">
-43
+                43
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -273,10 +272,10 @@
             <td style="display:none">9</td>
             <td style="padding-left:50px;">ການເມືອງ ແລະ ບໍລິຫານລັດຖະກິດ</td>
             <td style="text-align:center">
-12
+                12
             </td>
             <td style="text-align:center">
-41
+                41
             </td>
             <?php for ($x = 0; $x <= 14; $x++) {
             echo '         <td style="text-align:center">
@@ -307,12 +306,14 @@
                 </div>
                 <div class="modal-body">
                     <div class="row" align="left">
+                        <div class="card" style="width: 32rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">ແບ່ງປັນ</h5><br>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ແຂວງ</label>
-                            <input type="hidden" name="id_update" id="id_update"
-                                placeholder="ລະຫັດປະເພດສິນຄ້າ">
-                            <input type="text" name="province_id_update" id="province_update" placeholder="ລະຫັດກົມການສຶກສາ"
-                                class="form-control">
+                            <input type="hidden" name="id_update" id="id_update" placeholder="ລະຫັດປະເພດສິນຄ້າ">
+                            <input type="text" name="province_id_update" id="province_update"
+                                placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
@@ -335,8 +336,8 @@
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ສອບເສັງ</label>
-                            <input type="text" name="university_update" id="test_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="test_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
@@ -359,8 +360,8 @@
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ສສກ ແບ່ງ</label>
-                            <input type="text" name="university_update" id="ssk_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="ssk_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
@@ -373,34 +374,40 @@
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
+                        </div>
+                        </div>
+                        <!-- end card -->
+                        <div class="card" style="width: 32rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">ຈ່າຍຄ່າຮຽນ</h5><br>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ນ/ຮ</label>
-                            <input type="text" name="university_update" id="student_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="student_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ພ/ງ</label>
-                            <input type="text" name="university_update" id="gov_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="gov_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ສອບເສັງ</label>
-                            <input type="text" name="university_update" id="exam_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="exam_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ນ/ຮ ຕໍ່ເນື່ອງ</label>
-                            <input type="text" name="university_update" id="con_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="con_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
@@ -415,21 +422,23 @@
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ຕ່າງປະເທດ</label>
-                            <input type="text" name="university_update" id="foreign_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="foreign_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
                         <div class="col-md-12 col-sm-6 form-control2">
                             <label>ພ/ງ ເອກະຊົນ</label>
-                            <input type="text" name="university_update" id="private_update"
-                                placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                            <input type="text" name="university_update" id="private_update" placeholder="ຊື່ກົມການສຶກສາ"
+                                class="form-control">
                             <i class="fas fa-check-circle "></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small class="">Error message</small>
                         </div>
-
+                        </div>
+                        </div>
+                        <!-- end card -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -506,33 +515,32 @@ $("#num5").change(function() {
 
 
 
-    // update edit-share
-    $('.btnUpdate_share').on('click', function() {
-        $('#exampleModalUpdate').modal('show');
-        $tr = $(this).closest('tr');
-        var data = $tr.children("td").map(function() {
-            return $(this).text();
-        }).get();
+// update edit-share
+$('.btnUpdate_share').on('click', function() {
+    $('#exampleModalUpdate').modal('show');
+    $tr = $(this).closest('tr');
+    var data = $tr.children("td").map(function() {
+        return $(this).text();
+    }).get();
 
-        console.log(data);
-        $('#id_update').val(data[1]);
-        $('#province_update').val(data[5]);
-        $('#university_update').val(data[6]);
-        $('#employee_update').val(data[7]);
-        $('#test_update').val(data[8]);
-        $('#handicap_update').val(data[9]);
-        $('#bilingual_update').val(data[10]);
-        $('#ssk_update').val(data[11]);
-        $('#interview_update').val(data[12]);
-        $('#student_update').val(data[13]);
-        $('#gov_update').val(data[14]);
-        $('#exam_update').val(data[15]);
-        $('#con_update').val(data[16]);
-        $('#language_update').val(data[17]);
-        $('#foreign_update').val(data[18]);
-        $('#private_update').val(data[19]);     
-    });
-
+    console.log(data);
+    $('#id_update').val(data[1]);
+    $('#province_update').val(data[5]);
+    $('#university_update').val(data[6]);
+    $('#employee_update').val(data[7]);
+    $('#test_update').val(data[8]);
+    $('#handicap_update').val(data[9]);
+    $('#bilingual_update').val(data[10]);
+    $('#ssk_update').val(data[11]);
+    $('#interview_update').val(data[12]);
+    $('#student_update').val(data[13]);
+    $('#gov_update').val(data[14]);
+    $('#exam_update').val(data[15]);
+    $('#con_update').val(data[16]);
+    $('#language_update').val(data[17]);
+    $('#foreign_update').val(data[18]);
+    $('#private_update').val(data[19]);
+});
 </script>
 
 
