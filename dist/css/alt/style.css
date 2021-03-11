@@ -370,3 +370,10 @@ text-align-last: center;
       {
         content: '+';
       }
+
+.table-edit tr:hover{
+        background-color: #2588e4;
+        cursor: pointer;
+        color:white;
+}
+

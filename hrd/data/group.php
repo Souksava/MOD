@@ -44,14 +44,16 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
+                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ"
+                                        class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_Name" id="Dept_Name" placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
+                                    <input type="text" name="Dept_Name" id="Dept_Name" placeholder="ຊື່ກົມການສຶກສາ"
+                                        class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -270,47 +272,42 @@ function checkInputsUpdate() {
 ?>
 
 <script>
-$(document).ready(function(){
+$(document).ready(function() {
 
-  load_data("%%","0");
+    load_data("%%", "0");
 
-  function load_data(query,page)
-  {
-    $.ajax({
-      url:"fetch_category.php",
-      method:"POST",
-      data:{query:query,page:page},
-      success:function(data)
-      {
-        $('#result').html(data);
-      }
+    function load_data(query, page) {
+        $.ajax({
+            url: "fetch_category.php",
+            method: "POST",
+            data: {
+                query: query,
+                page: page
+            },
+            success: function(data) {
+                $('#result').html(data);
+            }
+        });
+    }
+    $('#search').keyup(function() {
+        var page = "0";
+        var search = $(this).val();
+        if (search != '') {
+            load_data(search, page);
+        } else {
+            load_data('%%', page);
+        }
     });
-  }
-  $('#search').keyup(function(){
-    var page = "0";
-    var search = $(this).val();
-    if(search != '')
-    {
-    load_data(search,page);
-    }
-    else
-    {
-      load_data('%%',page);
-    }
-  });
-  $(document).on('click', '.page-links', function(){    
-    var page = this.id;
-    console.log(page);
-    var search = $('#search').val();
-    if(search != '')
-    {
-      load_data(search,page);
-    }
-    else
-    {
-      load_data('%%',page);
-    }
-  });
+    $(document).on('click', '.page-links', function() {
+        var page = this.id;
+        console.log(page);
+        var search = $('#search').val();
+        if (search != '') {
+            load_data(search, page);
+        } else {
+            load_data('%%', page);
+        }
+    });
 });
 
 $('.btnDelete_group').on('click', function() {

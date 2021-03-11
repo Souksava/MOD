@@ -537,7 +537,7 @@ elseif ($user == 4){
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="'.$links.'edit/share" class="nav-link">
+                        <a href="'.$links.'edit/edit-share" class="nav-link">
                             <i class="far fas fa-book nav-icon"></i>
                             <p>ແກ້ໄຂການແບ່ງປັນ</p>
                         </a>
@@ -545,7 +545,7 @@ elseif ($user == 4){
                 </ul>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="'.$links.'edit/distribute" class="nav-link">
+                        <a href="'.$links.'edit/edit-distribute" class="nav-link">
                             <i class="far fas fa-book nav-icon"></i>
                             <p>ແກ້ໄຂການແຈກຢາຍ</p>
                         </a>
