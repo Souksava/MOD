@@ -57,7 +57,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ວິທະຍາໄລ</label>
-                                    <input type="text" name="Uni_ID" id="Uni_ID" placeholder="ວິທະຍາໄລ" class="form-control">
+                                    <select name="Uni_ID" id="Uni_ID">
+                                        <option value="" disabled selected>ເລືອກວິທະຍາໄລບ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -90,7 +94,7 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດຄະນະ</label>
-                                    <input type="text" name="Fac_ID" id="Fac_ID" placeholder="ລະຫັດຄະນະ" class="form-control">
+                                    <input type="text" name="Fac_ID_update" id="Fac_ID_update" placeholder="ລະຫັດຄະນະ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -104,7 +108,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ວິທະຍາໄລ</label>
-                                    <input type="text" name="Uni_ID_update" id="Uni_ID_update" placeholder="ວິທະຍາໄລ" class="form-control">
+                                    <select name="Uni_ID_update" id="Uni_ID_update">
+                                        <option value="" disabled selected>ເລືອກວິທະຍາໄລບ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -136,20 +144,20 @@
    <tr  class="result">
     <td>1</td>
     <td>ອຸດສາຫະກຳ</td>
-    <td>ວິທະຍາໄລ ອຸດສາຫະກຳ</td>
+    <td>ກ</td>
     <td></td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_faculty"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_faculty"></a>
     </td>
    </tr>
    <td>2</td>
     <td>ກະສີກຳ</td>
-    <td>ວິທະຍາໄລ ອຸດສາຫະກຳ</td>
+    <td>ກ</td>
     <td></td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_faculty"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_faculty"></a>
     </td>
    </tr>
    </table>
@@ -326,6 +334,31 @@ $(document).ready(function(){
   });
 });
 
+$('.btnDelete_faculty').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    $('.btnUpdate_faculty').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Fac_ID_update').val(data[0]);
+        $('#Fac_Name_update').val(data[1]);
+        $('#Uni_ID_update').val(data[2]);
+     
+    });
 </script>
 
 

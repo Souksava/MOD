@@ -1,5 +1,5 @@
 <?php
-  $title = "ຈັດການຂໍ້ມູນມາຫາໄລ";
+  $title = "ຈັດການຂໍ້ມູນມະຫາໄລ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
@@ -43,7 +43,7 @@
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ລະຫັດວິທະຍາໄລ</label>
-                                    <input type="text" name="Uni_ID" id="Uni_ID" placeholder="ລະຫັດວິທະຍາໄລ" class="form-control">
+                                    <input type="text" name="CC" id="CC" placeholder="ລະຫັດວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -57,7 +57,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ກົມການສຶກສາ" class="form-control">
+                                    <select name="Dept_ID" id="Dept_ID">
+                                <option value="">ເລືອກກົມການສຶກສາ</option>
+                                <option value="ກ">ກ</option>
+                                <option value="ຂ">ຂ</option>
+                                  </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -98,16 +102,16 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ວິທະຍາໄລ</label>
-                                    <input type="text" name="Dept_ID_update" id="Dept_ID_update"
+                                    <input type="text" name="Uni_Name_update" id="Uni_Name_update"
                                         placeholder="ຊື່ວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <select name="Fy_ID_update" id="Fy_ID_update">
-                                <option value="">ເລືອກລະຫັດກົມການສຶກສາ</option>
+                                    <label>ກົມການສຶກສາ</label>
+                                    <select name="Dept_ID_update" id="Dept_ID_update">
+                                <option value="">ເລືອກກົມການສຶກສາ</option>
                                 <option value="ກ">ກ</option>
                                 <option value="ຂ">ຂ</option>
                                   </select>
@@ -149,7 +153,7 @@
    </tr>
    <td>2</td>
     <td>ສ້າງຄູ</td>
-    <td>ຂ</td>
+    <td>ກ</td>
     <td>
       <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_University"></a>&nbsp; &nbsp; 
       <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_University"></a>
@@ -340,7 +344,6 @@ $('.btnDelete_University').on('click', function() {
 
         $('#id').val(data[0]);
     });
-    
     $('.btnUpdate_University').on('click', function() {
         $('#exampleModalUpdate').modal('show');
         $tr = $(this).closest('tr');
@@ -353,7 +356,7 @@ $('.btnDelete_University').on('click', function() {
         $('#CC_update').val(data[0]);
         $('#Uni_Name_update').val(data[1]);
         $('#Dept_ID_update').val(data[2]);
-
+     
     });
 
 </script>
