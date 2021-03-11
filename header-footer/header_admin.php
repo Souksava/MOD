@@ -336,6 +336,15 @@ elseif($user == 2){
                 </a>
             </li>
 
+            <li class="nav-item">
+            <a href="'.$links.'edit/edit-demand" class="nav-link">
+                <i class="fas fa fa-book nav-icon"></i>
+                <p>
+                    ແກ້ໄຂແຜນສ້າງນັກຮຽບ
+                </p>
+            </a>
+        </li>
+
 
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
@@ -425,6 +434,15 @@ elseif ($user == 3){
                     </p>
                 </a>
             </li>
+
+            <li class="nav-item">
+            <a href="'.$links.'edit/edit-supply" class="nav-link">
+                <i class="fas fa fa-book nav-icon"></i>
+                <p>
+                    ແກ້ໄຂແຜນຮັບ
+                </p>
+            </a>
+        </li>
 
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
@@ -537,7 +555,7 @@ elseif ($user == 4){
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="'.$links.'edit/edit-share" class="nav-link">
+                        <a href="'.$links.'edit/share" class="nav-link">
                             <i class="far fas fa-book nav-icon"></i>
                             <p>ແກ້ໄຂການແບ່ງປັນ</p>
                         </a>
@@ -545,7 +563,7 @@ elseif ($user == 4){
                 </ul>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="'.$links.'edit/edit-distribute" class="nav-link">
+                        <a href="'.$links.'edit/distribute" class="nav-link">
                             <i class="far fas fa-book nav-icon"></i>
                             <p>ແກ້ໄຂການແຈກຢາຍ</p>
                         </a>
