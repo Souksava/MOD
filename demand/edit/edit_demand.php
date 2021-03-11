@@ -35,7 +35,7 @@ table {
         <div class="col-xs-12 col-md-3 dropdown">
         <br>
             <select name="status" id="status" style="width:250px;" class="form-control" >
-                <option value="" disabled selected>ເລືອກກົມ </option>
+                <option value="" disabled selected>ເລືອກກົມ</option>
                 <option value="1">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</option>
                 <option value="2">ກົມສ້າງຄູ - 2020-2021</option>
                 <option value="3">ກົມອາຊີວະສຶກສາ - 2020-2021</option>
