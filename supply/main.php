@@ -21,6 +21,11 @@
             ສ້າງແຜນຮັບ
         </div>
     </a>
+    <a href="<?php echo $links ?>edit/edit-supply" class="m-a">
+        <div class="btn btn-light mainlink">
+            ແກ້ໄຂແຜນຮັບ
+        </div>
+    </a>
     <a href="<?php echo $links ?>report/report-supply" class="m-a">
         <div class="btn btn-light mainlink">
             ລາຍງານແຜນຮັບ

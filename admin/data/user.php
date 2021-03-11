@@ -24,7 +24,7 @@
         <b>ລາຍການ<?php echo $title?></b>&nbsp <img src="../../icon/hidemenu.ico" width="10px">
     </div>
     <div style="width: 46%; float: right;" align="right">
-        <form action="category" id="form1" method="POST" enctype="multipart/form-data">
+        <form action="user" id="form1" method="POST" enctype="multipart/form-data">
             <a href="#" data-toggle="modal" data-target="#exampleModalcategory">
                 <img src="../../icon/add.ico" alt="" width="25px">
             </a>
@@ -66,7 +66,7 @@
             </div>
         </form>
 
-        <form action="category" id="formUpdate" method="POST" enctype="multipart/form-data">
+        <form action="user" id="formUpdate" method="POST" enctype="multipart/form-data">
             <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">

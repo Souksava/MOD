@@ -1,9 +1,9 @@
 <?php
-  $title = "ແກ້ໄຂແຜນຮັບນັກຮຽນ";
+  $title = "ແກ້ໄຂແຜນສ້າງນັກຮຽນ";
   $path="../../";
   $links = "../";
   $session_path = "../../";
-  include ("../../header-footer/header_admin.php");
+  include ("../../header-footer/header_demand.php");
   $conn = mysqli_connect("Localhost", "root", "", "test");
 ?>
 
@@ -19,12 +19,11 @@ table {
 
 
 
-
 <form action="senddemand.php" target="_blank" method="Post">
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <h2>ແກ້ໄຂແຜນຮັບ</h2>
-            <h5>ກະລຸນາປ້ອນຈຳນວນຮອງຮັບນັກຮຽນໃນສາຖາບັນຂອງທ່ານ</h5>
+            <h2>ແກ້ໄຂແຜນສ້າງນັກຮຽນ</h2>
+            <h5>ກະລຸນາປ້ອນຈຳນວນນັກສຶກສາທີ່ຕ້ອງການຂໍທຶນ</h5>
         </div>
         <div class="col-xs-12 col-md-6" align="right">
             <h5>ລວມທັງໝົດ <input type="number" class="totalall" value="0" name="totalall" id="amount"
@@ -33,30 +32,18 @@ table {
         </div>
 
 
-        <div class="col-xs-12 col-md-6 dropdown">
+        <div class="col-xs-12 col-md-3 dropdown">
         <br>
-        <select name="status" id="status" style="width:250px;" class="form-control " >
+            <select name="status" id="status" style="width:250px;" class="form-control" >
                 <option value="" disabled selected>ເລືອກກົມ </option>
                 <option value="1">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</option>
                 <option value="2">ກົມສ້າງຄູ - 2020-2021</option>
                 <option value="3">ກົມອາຊີວະສຶກສາ - 2020-2021</option>
                 <option value="4">ກະຊວງທີ່ມີ - 2020-2021</option>
             </select>
-               <br>
-            <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                ເລືອກກົມ
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">ກົມການສຶກສາຊັ້ນສູງ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກົມສ້າງຄູ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກົມອາຊີວະສຶກສາ - 2020-2021</a>
-                <a class="dropdown-item" href="#">ກະຊວງທີ່ມີ - 2020-2021</a>
-            </div>
-        </div> -->
+
+        </div>
     </div>
- 
-    <br>
     <br>
 
 
@@ -67,17 +54,18 @@ table {
                 <th rowspan="2" style="text-align: center;">ສາຂາວິຊາຮຽນ</th>
                 <th rowspan="2" style="text-align: center;">ລະດັບຊັ້ນ</th>
                 <th rowspan="2" style="text-align: center;">ລວມ</th>
-                <th style="text-align: center!important;width:200px;" >ຈຳນວນ</th>
+                <th colspan="2" style="text-align: center; position:st">ຈຳນວນ</th>
             </tr>
             <tr style="text-align: center;">
-
+                <th>ນັກຮຽນ</th>
+                <th>ພະນັກງານ</th>
             </tr>
             <?php
                 $no_ = 0;
                 $unitversity = mysqli_query($conn,"select * from unitversity;");
                 foreach($unitversity as $uni){
             ?>
-            <tr style="background-color:#5199FA;color:white;">
+            <tr   style="background-color:#5199FA;color:white;" >
                 <td>
                     <?php echo $no_ += 1; ?>
                 </td>
@@ -88,9 +76,11 @@ table {
 2
                 </td>
                 <td style="text-align:center">
-2
+1
                 </td>
-
+                <td style="text-align:center">
+1
+                </td>
             </tr>
             <?php
                 $unit_id = $uni['unit_id'];
@@ -109,7 +99,9 @@ table {
                 <td style="text-align:center">
 1
                 </td>
-
+                <td style="text-align:center">
+1
+                </td>
             </tr>
             <!-- parent-end -->
             <?php
@@ -117,7 +109,7 @@ table {
                 $course = mysqli_query($conn,"select * from course where fac_id='$fac_id'");
                 foreach($course as $cour){
             ?>
-            <tr class="child-<?php echo $fac['fac_id'] ?> btnUpdate_supply" style="display: table-row;">
+            <tr class="child-<?php echo $fac['fac_id'] ?> btnUpdate_demand" style="display: table-row;">
                 <td></td>
                 <td style="padding-left:50px;"><?php echo $cour['course_name'] ?> <input type="hidden" name="fac_1"
                         value="ຄະນະສຶກສາສາດ"></td>
@@ -125,12 +117,14 @@ table {
                     ປະລິນຍາຕີ
                 </td>
                 <td style="text-align:center">
+2
+                </td>
+                <td style="text-align:center;">
 1
                 </td>
                 <td style="text-align:center;">
 1
                 </td>
-
             </tr>
             <?php 
                 }
@@ -147,13 +141,13 @@ table {
 
 
     <!-- modal update -->
-    <form action="edit-supply" id="formUpdate" method="POST" enctype="multipart/form-data">
+    <form action="edit-demand" id="formUpdate" method="POST" enctype="multipart/form-data">
         <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂແຜນຮັບນັກຮຽນ</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂແຜນສ້າງນັກຮຽນ</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -161,10 +155,18 @@ table {
                     <div class="modal-body">
                         <div class="row" align="left">
                             <div class="col-md-12 col-sm-6 form-control2">
-                                <label>ຈຳນວນ</label>
+                                <label>ນ/ຮ</label>
                                 <input type="hidden" name="student_update" id="id_update"
-                                    >
-                                <input type="text" name="province_id_update" id="number_update" placeholder=""
+                                    placeholder="ລະຫັດປະເພດສິນຄ້າ">
+                                <input type="text" name="province_id_update" id="student_update" placeholder=""
+                                    class="form-control">
+                                <i class="fas fa-check-circle "></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="">Error message</small>
+                            </div>
+                            <div class="col-md-12 col-sm-6 form-control2">
+                                <label>ພ/ງ</label>
+                                <input type="text" name="employee_update" id="employee_update" placeholder=""
                                     class="form-control">
                                 <i class="fas fa-check-circle "></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -182,6 +184,10 @@ table {
         </div>
     </form>
     <!-- end modal update -->
+
+
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -466,13 +472,10 @@ $('.demandInput').keyup(function() {
 
     // ລວມທັງໝົດ ມະຫາໄລບວກມະຫາໄລ
     $("#amount").val(total_unit);
-
-
-
 });
 
     // update edit-share
-    $('.btnUpdate_supply').on('click', function() {
+    $('.btnUpdate_demand').on('click', function() {
         $('#exampleModalUpdate').modal('show');
         $tr = $(this).closest('tr');
         var data = $tr.children("td").map(function() {
@@ -481,9 +484,10 @@ $('.demandInput').keyup(function() {
 
         console.log(data);
         $('#id_update').val(data[0]);
-        $('#number_update').val(data[4]);
- 
+        $('#student_update').val(data[4]);
+        $('#employee_update').val(data[5]);   
     });
+
 </script>
 
 

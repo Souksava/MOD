@@ -3,7 +3,7 @@
   $path="../../";
   $links = "../";
   $session_path = "../../";
-  include ("../../header-footer/header_admin.php");
+  include ("../../header-footer/header_supply.php");
   $conn = mysqli_connect("Localhost", "root", "", "test");
 ?>
 

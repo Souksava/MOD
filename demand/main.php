@@ -11,6 +11,11 @@
             ສະເໜີແຜນສ້າງ
         </div>
     </a>
+    <a href="<?php echo $links ?>edit/edit-demand" class="m-a">
+        <div class="btn btn-light mainlink">
+            ແກ້ໄຂແຜນສ້າງນັກຮຽບ
+        </div>
+    </a>
     <a href="<?php echo $links ?>report/report-demand" class="m-a">
         <div class="btn btn-light mainlink">
             ລາຍງານແຜນສ້າງ

@@ -336,6 +336,15 @@ elseif($user == 2){
                 </a>
             </li>
 
+            <li class="nav-item">
+            <a href="'.$links.'edit/edit-demand" class="nav-link">
+                <i class="fas fa fa-book nav-icon"></i>
+                <p>
+                    ແກ້ໄຂແຜນສ້າງນັກຮຽບ
+                </p>
+            </a>
+        </li>
+
 
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
@@ -425,6 +434,15 @@ elseif ($user == 3){
                     </p>
                 </a>
             </li>
+
+            <li class="nav-item">
+            <a href="'.$links.'edit/edit-supply" class="nav-link">
+                <i class="fas fa fa-book nav-icon"></i>
+                <p>
+                    ແກ້ໄຂແຜນຮັບ
+                </p>
+            </a>
+        </li>
 
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
