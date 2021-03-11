@@ -56,7 +56,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຄະນະ</label>
-                                    <input type="text" name="Fac_ID" id="Fac_ID" placeholder="ຄະນະ" class="form-control">
+                                    <select name="Fac_ID" id="Fac_ID">
+                                        <option value="" disabled selected>ເລືອກຄະນະ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -104,7 +108,11 @@
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຄະນະ</label>
-                                    <input type="text" name="Fac_ID_update" id="Fac_ID_update" placeholder="ຄະນະ" class="form-control">
+                                    <select name="Fac_ID_update" id="Fac_ID_update">
+                                        <option value="" disabled selected>ເລືອກຄະນະ</option>
+                                        <option value="ກ">ກ</option>
+                                        <option value="ຂ">ຂ</option>
+                                    </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -136,34 +144,26 @@
    <tr  class="result">
     <td>1</td>
     <td>ສາຂາອຸດສາຫະກຳ</td>
-    <td>ກະສີກອນສາດ</td>
+    <td>ກ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_course"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_course"></a>
     </td>
    </tr>
    <td>2</td>
     <td>ສາຂາອຸດສາຫະກຳ</td>
-    <td>ກະສີກອນສາດ</td>
+    <td>ກ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_course"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_course"></a>
     </td>
    </tr>
    <td>3</td>
     <td>ສາຂາອຸດສາຫະກຳ</td>
-    <td>ກະສີກອນສາດ</td>
+    <td>ກ</td>
     <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
-    </td>
-   </tr>
-   <td>4</td>
-    <td>ສາຂາອຸດສາຫະກຳ</td>
-    <td>ກະສີກອນສາດ</td>
-    <td>
-      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_cate"></a>&nbsp; &nbsp; 
-      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_cate"></a>
+      <a href="#" data-toggle="modal" data-target="#exampleModalUpdate" class="fa fa-pen toolcolor btnUpdate_course"></a>&nbsp; &nbsp; 
+      <a href="#" data-toggle="modal" data-target="#exampleModalDelete" class="fa fa-trash toolcolor btnDelete_course"></a>
     </td>
    </tr>
    </table>
@@ -341,6 +341,31 @@ $(document).ready(function(){
   });
 });
 
+$('.btnDelete_course').on('click', function() {
+        $('#exampleModalDelete').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#id').val(data[0]);
+    });
+    $('.btnUpdate_course').on('click', function() {
+        $('#exampleModalUpdate').modal('show');
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+    
+        console.log(data);
+
+        $('#Course_ID_update').val(data[0]);
+        $('#Course_Name_update').val(data[1]);
+        $('#Fac_ID_update').val(data[2]);
+     
+    });
 </script>
 
 
