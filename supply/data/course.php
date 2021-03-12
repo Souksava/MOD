@@ -41,14 +41,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດສາຂາວິຊາ</label>
-                                    <input type="text" name="Course_ID" id="Course_ID" placeholder="ລະຫັດສາຂາວິຊາ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ສາຂາວິຊາ</label>
+                                    <input type="hidden" name="Course_ID" id="Course_ID"
+                                        placeholder="ລະຫັດສາຂາວິຊາ">
                                     <input type="text" name="Course_Name" id="Course_Name" placeholder="ຊື່ສາຂາວິຊາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -91,16 +86,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="row" align="left">
-
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດສາຂາວິຊາ</label>
-                                    <input type="text" name="Course_ID_update" id="Course_ID_update" placeholder="ລະຫັດສາຂາວິຊາ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ສາຂາວິຊາ</label>
+                                    <input type="hidden" name="Course_ID_update" id="Course_ID_update"
+                                        placeholder="ລະຫັດສາຂາວິຊາ">
                                     <input type="text" name="Course_Name_update" id="Course_Name_update" placeholder="ຊື່ສາຂາວິຊາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -198,22 +187,29 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Course_Name = document.getElementById('Course_Name');
+const Fac_ID = document.getElementById('Fac_ID');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    const Course_NameValue =Course_Name.value.trim();
+    const Fac_IDValue =Fac_ID.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Course_NameValue === '') {
+        setErrorFor(Course_Name, 'ຊື່ສາຂາວິຊາ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Course_Name);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+    if (Fac_IDValue === '') {
+        setErrorFor(Fac_ID, 'ຄະນະ');
+    } else {
+        setSuccessFor(Fac_ID);
+    }
+    if (Course_NameValue !== ''  && Fac_IDValue !== '') {
+        document.getElementById("form1").action = "course";
         document.getElementById("form1").submit();
     }
 }
@@ -221,22 +217,28 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Course_Name_update = document.getElementById('Course_Name_update');
+const Fac_ID_update = document.getElementById('Fac_ID_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+  const Course_Name_updateValue = Course_Name_update.value.trim();
+    const Fac_ID_updateValue = Fac_ID_update.value.trim();
+    if (Course_Name_updateValue === '') {
+        setErrorFor(Course_Name_update, 'ຊື່ສາຂາວິຊາ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Course_Name_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+    if (Fac_ID_updateValue === '') {
+        setErrorFor(Fac_ID_update, 'ກະລຸນາປ້ອນຄະນະ');
+    } else {
+        setSuccessFor(Fac_ID_update);
+    }
+    if (Course_Name_updateValue !== '' ) {
+        document.getElementById("formUpdate").action = "course";
         document.getElementById("formUpdate").submit();
     }
 }

@@ -293,22 +293,76 @@
   
   <script type="text/javascript">
   const myform = document.getElementById('form1');
-  const cate_name = document.getElementById('cate_name');
+  const Demand_Name = document.getElementById('Demand_Name');
+  const Surname = document.getElementById('Surname');
+  const Gender = document.getElementById('Gender');
+  const Tel = document.getElementById('Tel');
+  const Email = document.getElementById('Email');
+  const Pass = document.getElementById('Pass');
+  const User_ID = document.getElementById('User_ID');
+  const P_M_ID = document.getElementById('P_M_ID');
   myform.addEventListener('submit', (e) => {
       e.preventDefault();
       checkInputs();
   });
   
   function checkInputs() {
-      const cate_nameValue = cate_name.value.trim();
+      const Demand_NameValue = Demand_Name.value.trim();
+      const SurnameValue = Surname.value.trim();
+      const GenderValue = Gender.value.trim();
+      const TelValue = Tel.value.trim();
+      const EmailValue = Email.value.trim();
+      const PassValue = Pass.value.trim();
+      const User_IDValue = User_ID.value.trim();
+      const P_M_IDValue = P_M_ID.value.trim();
+
   
-      if (cate_nameValue === '') {
-          setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+      if (Demand_NameValue === '') {
+          setErrorFor(Demand_Name, 'ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ລະບົບ');
       } else {
-          setSuccessFor(cate_name);
+          setSuccessFor(Demand_Name);
       }
-      if (cate_nameValue !== '') {
-          document.getElementById("form1").action = "category";
+
+      if (SurnameValue === '') {
+          setErrorFor(Surname, 'ກະລຸນາປ້ອນນາມສະກຸນ');
+      } else {
+          setSuccessFor(Surname);
+      }
+
+      if (GenderValue === '') {
+          setErrorFor(Gender, 'ກະລຸນາປ້ອນເພດ');
+      } else {
+          setSuccessFor(Gender);
+      }
+      if (TelValue === '') {
+          setErrorFor(Tel, 'ກະລຸນາປ້ອນເບີໂທລະສັບ');
+      } else {
+          setSuccessFor(Tel);
+      }
+
+      if (EmailValue === '') {
+          setErrorFor(Email, 'ກະລຸນາປ້ອນອີເມວ');
+      } else {
+          setSuccessFor(Email);
+      }
+
+      if (PassValue === '') {
+          setErrorFor(Pass, 'ກະລຸນາປ້ອນເຂົ້າໃຊ້ລະບົບ');
+      } else {
+          setSuccessFor(Pass);
+      }
+      if (User_IDValue === '') {
+          setErrorFor(User_ID, 'ກະລຸນາເລືອກຜູ້ໃຊ້');
+      } else {
+          setSuccessFor(Pass);
+      }
+      if (P_M_IDValue === '') {
+          setErrorFor(P_M_ID, 'ກະລຸນາເລືອກຜູ້ຂໍທຶນ');
+      } else {
+          setSuccessFor(P_M_ID);
+      }
+      if (Demand_NameValue !== '' && SurnameValue !=='' && GenderValue !=='' && TelValue !=='' && EmailValue !=='' && PasslValue !=='' && User_IDlValue !=='' && P_M_IDValue !=='') {
+          document.getElementById("form1").action = "user_demand";
           document.getElementById("form1").submit();
       }
   }
@@ -316,21 +370,73 @@
   
   <script type="text/javascript">
   const myformUpdate = document.getElementById('formUpdate');
-  const cate_id_update = document.getElementById('cate_id_update');
-  const cate_name_update = document.getElementById('cate_name_update');
+  const Demand_Name_update = document.getElementById('Demand_Name_update');
+  const Surname_update = document.getElementById('Surname_update');
+  const Gender_update = document.getElementById('Gender_update');
+  const Tel_update = document.getElementById('Tel_update');
+  const Email_update = document.getElementById('Email_update');
+  const Pass_update = document.getElementById('Pass_update');
+  const User_ID_update = document.getElementById('User_ID_update');
+  const P_M_ID_update = document.getElementById('P_M_ID_update');
   myformUpdate.addEventListener('submit', (e) => {
       e.preventDefault();
       checkInputsUpdate();
   });
   
   function checkInputsUpdate() {
-      const cate_name_updateValue = cate_name_update.value.trim();
-      if (cate_name_updateValue === '') {
-          setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const Demand_Name_updateValue = Demand_Name_update.value.trim();
+      const Surname_updateValue = Surname_update.value.trim();
+      const Gender_updateValue = Gender_update.value.trim();
+      const Tel_updateValue = Tel_update.value.trim();
+      const Email_updateValue = Email_update.value.trim();
+      const Pass_updateValue = Pass_update.value.trim();
+      const User_ID_updateValue = User_ID_update.value.trim();
+      const P_M_ID_updateValue = P_M_ID_update.value.trim();
+      if (Demand_Name_updateValue === '') {
+          setErrorFor(Demand_Name_update, 'ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ລະບົບ');
       } else {
-          setSuccessFor(cate_name_update);
+          setSuccessFor(Demand_Name_update);
       }
-      if (cate_name_updateValue !== '') {
+
+      if (Surname_updateValue === '') {
+          setErrorFor(Surname_update, 'ກະລຸນາປ້ອນນາມສະກຸນ');
+      } else {
+          setSuccessFor(Surname_update);
+      }
+
+      if (Gender_updateValue === '') {
+          setErrorFor(Gender_update, 'ກະລຸນາປ້ອນເພດ');
+      } else {
+          setSuccessFor(Gender_update);
+      }
+      if (Tel_updateValue === '') {
+          setErrorFor(Tel_update, 'ກະລຸນາປ້ອນເບີໂທລະສັບ');
+      } else {
+          setSuccessFor(Tel_update);
+      }
+
+      if (Email_updateValue === '') {
+          setErrorFor(Email_update, 'ກະລຸນາປ້ອນອີເມວ');
+      } else {
+          setSuccessFor(Emai_update);
+      }
+
+      if (Pass_updateValue === '') {
+          setErrorFor(Pass_update, 'ກະລຸນາປ້ອນເຂົ້າໃຊ້ລະບົບ');
+      } else {
+          setSuccessFor(Pass_update);
+      }
+      if (User_ID_updateValue === '') {
+          setErrorFor(User_ID_update, 'ກະລຸນາເລືອກຜູ້ໃຊ້');
+      } else {
+          setSuccessFor(Pass_update);
+      }
+      if (P_M_ID_updateValue === '') {
+          setErrorFor(P_M_ID_update, 'ກະລຸນາເລືອກຜູ້ຂໍທຶນ');
+      } else {
+          setSuccessFor(P_M_ID_update);
+      }
+      if (Demand_Name_updateValue !== '' && Surname_updateValue !=='' && Gender_updateValue !=='' && Tel_updateValue !=='' && Email_updateValue !=='' && Pass_updatelValue !=='' && User_ID_updatelValue !=='' && P_M_ID_updateValue !=='') {
           document.getElementById("formUpdate").action = "category";
           document.getElementById("formUpdate").submit();
       }

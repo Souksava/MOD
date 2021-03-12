@@ -25,7 +25,7 @@
         <b>ລາຍການ<?php echo $title?></b>&nbsp <img src="../../icon/hidemenu.ico" width="10px">
     </div>
     <div style="width: 46%; float: right;" align="right">
-        <form action="category" id="form1" method="POST" enctype="multipart/form-data">
+        <form action="university" id="form1" method="POST" enctype="multipart/form-data">
             <a href="#" data-toggle="modal" data-target="#exampleModalcategory">
                 <img src="../../icon/add.ico" alt="" width="25px">
             </a>
@@ -42,14 +42,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດວິທະຍາໄລ</label>
-                                    <input type="text" name="CC" id="CC" placeholder="ລະຫັດວິທະຍາໄລ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ວິທະຍາໄລ</label>
+                                    <input type="hidden" name="CC" id="CC"
+                                        placeholder="ລະຫັດວິທະຍາໄລ">
                                     <input type="text" name="Uni_Name" id="Uni_Name" placeholder="ຊື່ວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -79,7 +74,7 @@
             </div>
         </form>
 
-        <form action="category" id="formUpdate" method="POST" enctype="multipart/form-data">
+        <form action="university" id="formUpdate" method="POST" enctype="multipart/form-data">
             <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -93,15 +88,10 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດວິທະຍາໄລ</label>
-                                    <input type="text" name="CC_update" id="CC_update"
-                                        placeholder="ລະຫັດວິທະຍາໄລ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small class="">Error message</small>
-                                </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ວິທະຍາໄລ</label>
+                                    <input type="hidden" name="CC_update" id="CC_update"
+                                        placeholder="ລະຫັດວິທະຍາໄລ">
                                     <input type="text" name="Uni_Name_update" id="Uni_Name_update"
                                         placeholder="ຊື່ວິທະຍາໄລ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
@@ -163,7 +153,7 @@
 </div>
 
 
-<form action="category" id="formDelete" method="POST" enctype="multipart/form-data">
+<form action="university" id="formDelete" method="POST" enctype="multipart/form-data">
     <div class="modal fade" id="exampleModalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -190,22 +180,29 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Uni_Name = document.getElementById('Uni_Name');
+const Dept_ID = document.getElementById('Dept_ID');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    const Uni_NameValue = Uni_Name.value.trim();
+    const Dept_IDValue = Dept_ID.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Uni_NameValue === '') {
+        setErrorFor(Uni_Name, 'ກະລຸນາປ້ອນຊື່ວິທະຍາໄລ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Uni_Name);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+    if (Dept_IDValue === '') {
+        setErrorFor(Dept_ID, 'ກະລຸນາເລືອກກົມການສຶກສາ');
+    } else {
+        setSuccessFor(Dept_ID);
+    }
+    if (Uni_NameValue !== '' && Dept_IDValue !== '') {
+        document.getElementById("form1").action = "university";
         document.getElementById("form1").submit();
     }
 }
@@ -213,22 +210,28 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Uni_Name_update = document.getElementById('Uni_Name_update');
+const Dept_ID_update = document.getElementById('Dept_ID_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+  const Uni_Name_updateValue = Uni_Name_update.value.trim();
+    const Dept_ID_updateValue = Dept_ID_update.value.trim();
+    if (Uni_Name_updateValue === '') {
+        setErrorFor(Uni_Name_update, 'ກະລຸນາປ້ອນຊື່ວິທະຍາໄລ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Uni_Name_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+    if (Dept_ID_updateValue === '') {
+        setErrorFor(Dept_ID_update, 'ກະລຸນາເລືອກກົມການສຶກສາ');
+    } else {
+        setSuccessFor(Dept_ID_update);
+    }
+    if (Uni_Name_updateValue !== '' && Dept_ID_updateValue !== '' ) {
+        document.getElementById("formUpdate").action = "university";
         document.getElementById("formUpdate").submit();
     }
 }

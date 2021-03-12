@@ -43,15 +43,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_ID" id="Dept_ID" placeholder="ລະຫັດກົມການສຶກສາ"
-                                        class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ກົມການສຶກສາ</label>
+                                    <input type="hidden" name="Dept_ID" id="Dept_ID"
+                                        placeholder="ລະຫັດກົມການສຶກສາ">
                                     <input type="text" name="Dept_Name" id="Dept_Name" placeholder="ຊື່ກົມການສຶກສາ"
                                         class="form-control">
                                     <i class="fas fa-check-circle "></i>
@@ -85,15 +79,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດກົມການສຶກສາ</label>
-                                    <input type="text" name="Dept_ID_update" id="Dept_ID_update"
-                                        placeholder="ລະຫັດກົມການສຶກສາ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ກົມການສຶກສາ</label>
+                                    <input type="hidden" name="Dept_ID_update" id="Dept_ID_update"
+                                        placeholder="ລະຫັດກົມການສຶກສາ">
                                     <input type="text" name="Dept_Name_update" id="Dept_Name_update"
                                         placeholder="ຊື່ກົມການສຶກສາ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
@@ -172,22 +160,22 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Dept_Name = document.getElementById('Dept_Name');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    const Dept_NameValue = Dept_Name.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Dept_NameValue === '') {
+        setErrorFor(Dept_Name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Dept_Name);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+    if (Dept_NameValue !== '') {
+        document.getElementById("form1").action = "group";
         document.getElementById("form1").submit();
     }
 }
@@ -195,22 +183,21 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Dept_Name_update = document.getElementById('Dept_Name_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const Dept_Name_updateValue = Dept_Name_update.value.trim();
+    if (Dept_Name_updateValue === '') {
+        setErrorFor(Dept_Name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Dept_Name_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+    if (Dept_Name_updateValue !== '') {
+        document.getElementById("formUpdate").action = "group";
         document.getElementById("formUpdate").submit();
     }
 }

@@ -88,7 +88,7 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ຜູ້ໃຊ້</label>
-                                      <select name="status" id="status">
+                                      <select name="User_ID" id="User_ID">
                                         <option value="">--- ເລືອກຜູ້ໃຊ້ ---</option>
                                         <option value="1">001</option>
                                         <option value="2">002</option>
@@ -99,7 +99,7 @@
                                   </div>
                                   <div class="col-md-12 col-sm-6 form-control2">
                                       <label>ລະຫັດວິທະຍາໄລ</label>
-                                      <select name="status" id="status">
+                                      <select name="Uni_ID" id="Uni_ID">
                                         <option value="">--- ເລືອກວິທະຍາໄລ ---</option>
                                         <option value="1">ກ</option>
                                         <option value="2">ຂ</option>
@@ -293,44 +293,148 @@
   
   <script type="text/javascript">
   const myform = document.getElementById('form1');
-  const cate_name = document.getElementById('cate_name');
+  const HRD_Name = document.getElementById('HRD_Name');
+  const Surname = document.getElementById('Surname');
+  const Gender = document.getElementById('Gender');
+  const Tel = document.getElementById('Tel');
+  const Email= document.getElementById('Email');
+  const Pass = document.getElementById('Pass');
+  const User_ID= document.getElementById('User_ID');
+  const Uni_ID = document.getElementById('Uni_ID');
   myform.addEventListener('submit', (e) => {
       e.preventDefault();
       checkInputs();
   });
   
   function checkInputs() {
-      const cate_nameValue = cate_name.value.trim();
-  
-      if (cate_nameValue === '') {
-          setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+      const HRD_NameValue = HRD_Name.value.trim();
+      const SurnameValue = Surname.value.trim();
+      const GenderValue = Gender.value.trim();
+      const TelValue  = Tel.value.trim();
+      const EmailValue = Email.value.trim();
+      const PassValue = Pass.value.trim();
+      const User_IDValue  = User_ID.value.trim();
+      const Uni_IDValue  = Uni_ID.value.trim();
+      if (HRD_NameValue === '') {
+          setErrorFor(HRD_Name, 'ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ລະບົບ');
       } else {
-          setSuccessFor(cate_name);
+          setSuccessFor(HRD_Name);
       }
-      if (cate_nameValue !== '') {
-          document.getElementById("form1").action = "category";
-          document.getElementById("form1").submit();
+
+      if (SurnameValue === '') {
+          setErrorFor(Surname, 'ກະລຸນາປ້ອນນາມສະກຸນ');
+      } else {
+          setSuccessFor(Surname);
+      }
+
+      if (GenderValue === '') {
+          setErrorFor(Gender, 'ກະລຸນາປ້ອນເພດ');
+      } else {
+          setSuccessFor(Gender);
+      }
+      if (TelValue === '') {
+          setErrorFor(Tel, 'ກະລຸນາປ້ອນເບີໂທລະສັບ');
+      } else {
+          setSuccessFor(Tel);
+      }
+
+      if (EmailValue === '') {
+          setErrorFor(Email, 'ກະລຸນາປ້ອນອີເມວ');
+      } else {
+          setSuccessFor(Emai);
+      }
+
+      if (PassValue === '') {
+          setErrorFor(Pass, 'ກະລຸນາປ້ອນເຂົ້າໃຊ້ລະບົບ');
+      } else {
+          setSuccessFor(Pass);
+      }
+      if (User_IDValue === '') {
+          setErrorFor(User_ID, 'ກະລຸນາເລືອກຜູ້ໃຊ້');
+      } else {
+          setSuccessFor(User_ID);
+      }
+      if (Uni_IDValue === '') {
+          setErrorFor(Uni_ID, 'ກະລຸນາເລືອກລະຫັດວິທະຍາໄລ');
+      } else {
+          setSuccessFor(Uni_ID);
+      }
+      if ( HRD_NameValue !== '' && SurnameValue !== '' && GenderValue !== '' && TelValue !== '' && EmailValue !== '' && PassValue !== '' && User_IDValue !== '' && Uni_IDValue !== ''   ) {
+        document.getElementById("form1").action = "user_hrd";
+        document.getElementById("form1").submit();
       }
   }
   </script>
   
   <script type="text/javascript">
   const myformUpdate = document.getElementById('formUpdate');
-  const cate_id_update = document.getElementById('cate_id_update');
-  const cate_name_update = document.getElementById('cate_name_update');
+  const HRD_Name_update = document.getElementById('HRD_Name_update');
+  const Surname_update = document.getElementById('Surname_update');
+  const Gender_update = document.getElementById('Gender_update');
+  const Tel_update = document.getElementById('Tel_update');
+  const Email_update= document.getElementById('Email_update');
+  const Pass_update = document.getElementById('Pass_update');
+  const User_ID_update = document.getElementById('User_ID_update');
+  const Uni_ID_update = document.getElementById('Uni_ID_update');
   myformUpdate.addEventListener('submit', (e) => {
       e.preventDefault();
       checkInputsUpdate();
   });
   
   function checkInputsUpdate() {
-      const cate_name_updateValue = cate_name_update.value.trim();
-      if (cate_name_updateValue === '') {
-          setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const HRD_Name_updateValue = HRD_Name_update.value.trim();
+      const Surname_updateValue = Surname_update.value.trim();
+      const Gender_updateValue = Gender_update.value.trim();
+      const Tel_updateValue  = Tel_update.value.trim();
+      const Email_updateValue = Email_update.value.trim();
+      const Pass_updateValue = Pass_update.value.trim();
+      const User_ID_updateValue  = User_ID_update.value.trim();
+      const Uni_ID_updateValue  = Uni_ID_update.value.trim();
+      if (HRD_Name_updateValue === '') {
+          setErrorFor(HRD_Name_update, 'ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ລະບົບ');
       } else {
-          setSuccessFor(cate_name_update);
+          setSuccessFor(HRD_Name_update);
       }
-      if (cate_name_updateValue !== '') {
+
+      if (Surname_updateValue === '') {
+          setErrorFor(Surname_update, 'ກະລຸນາປ້ອນນາມສະກຸນ');
+      } else {
+          setSuccessFor(Surname_update);
+      }
+
+      if (Gender_updateValue === '') {
+          setErrorFor(Gender_update, 'ກະລຸນາປ້ອນເພດ');
+      } else {
+          setSuccessFor(Gender_update);
+      }
+      if (Tel_updateValue === '') {
+          setErrorFor(Tel_update, 'ກະລຸນາປ້ອນເບີໂທລະສັບ');
+      } else {
+          setSuccessFor(Tel_update);
+      }
+
+      if (Email_updateValue === '') {
+          setErrorFor(Email_update, 'ກະລຸນາປ້ອນອີເມວ');
+      } else {
+          setSuccessFor(Emai_update);
+      }
+
+      if (Pass_updateValue === '') {
+          setErrorFor(Pass_update, 'ກະລຸນາປ້ອນເຂົ້າໃຊ້ລະບົບ');
+      } else {
+          setSuccessFor(Pass_update);
+      }
+      if (User_ID_updateValue === '') {
+          setErrorFor(User_ID_update, 'ກະລຸນາເລືອກຜູ້ໃຊ້');
+      } else {
+          setSuccessFor(User_ID_update);
+      }
+      if (Uni_ID_updateValue === '') {
+          setErrorFor(Uni_ID_update, 'ກະລຸນາເລືອກລະຫັດວິທະຍາໄລ');
+      } else {
+          setSuccessFor(Uni_ID_update);
+      }
+      if (HRD_Name_updateValue !== '' && Surname_updateValue !== '' && Gender_updateValue !== ''  && Tel_updateValue !== '' && Email_updateValue !== '' && Pass_updateValue !== '' && User_ID_updateValue !== '' && Uni_ID_updateValue !== ''   ) {
           document.getElementById("formUpdate").action = "category";
           document.getElementById("formUpdate").submit();
       }

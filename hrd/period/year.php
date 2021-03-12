@@ -12,7 +12,7 @@
         <b>ລາຍການ<?php echo $title?></b>&nbsp <img src="../../icon/hidemenu.ico" width="10px">
     </div>
     <div style="width: 46%; float: right;" align="right">
-        <form action="category" id="form1" method="POST" enctype="multipart/form-data">
+        <form action="year" id="form1" method="POST" enctype="multipart/form-data">
             <a href="#" data-toggle="modal" data-target="#exampleModalcategory">
                 <img src="../../icon/add.ico" alt="" width="25px">
             </a>
@@ -181,6 +181,34 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script type="text/javascript">
+const myform = document.getElementById('form1');
+const Fy_ID = document.getElementById('Fy_ID');
+const status = document.getElementById('status');
+myform.addEventListener('submit', (e) => {
+    e.preventDefault();
+    checkInputs();
+});
+
+function checkInputs() {
+    Fy_IDValue = Fy_IDe.value.trim();
+    statusValue = status.value.trim();
+    if (Fy_IDValue === '') {
+        setErrorFor(Fy_ID, 'ກະລຸນາປ້ອນສົກຮຽນປີ');
+    } else {
+        setSuccessFor(Fy_ID);
+    }
+
+    if (statusValue === '') {
+        setErrorFor(status, 'ກະລຸນາປ້ອນຕິດຄັດເອກະສານ');
+    } else {
+        setSuccessFor(status);
+    }
+    if (Fy_IDValue !== '' && statusValue !== '' ) {
+        document.getElementById("form1").action = "year";
+        document.getElementById("form1").submit();
+    }
+}
+
 var loadFile = function(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);

@@ -153,22 +153,22 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Doc_Name = document.getElementById('Doc_Name');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    const Doc_NameValue = Doc_Name.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Doc_NameValue === '') {
+        setErrorFor(Doc_Name, 'ກະລຸນາປ້ອນຊື່ປະເພດເອກະສານ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Doc_Name);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+    if (Doc_NameValue !== '') {
+        document.getElementById("form1").action = "type";
         document.getElementById("form1").submit();
     }
 }
@@ -176,21 +176,20 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Doc_Name_update = document.getElementById('Doc_Name_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const Doc_Name_updateValue = Doc_Name_update.value.trim();
+    if (Doc_Name_updateValue === '') {
+        setErrorFor(Doc_Name_update, 'ກະລຸນາປ້ອນຊື່ປະເພດເອກະສານ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Doc_Name_update);
     }
-    if (cate_name_updateValue !== '') {
+    if (Doc_Name_updateValue !== '') {
         document.getElementById("formUpdate").action = "category";
         document.getElementById("formUpdate").submit();
     }

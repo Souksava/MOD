@@ -42,14 +42,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດຄະນະ</label>
-                                    <input type="text" name="Fac_ID" id="Fac_ID" placeholder="ລະຫັດຄະນະ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ຄະນະ</label>
+                                    <input type="hidden" name="Fac_ID" id="Fac_ID"
+                                        placeholder="ລະຫັດຄະນະ">
                                     <input type="text" name="Fac_Name" id="Fac_Name" placeholder="ຊື່ຄະນະ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -93,14 +88,9 @@
                         <div class="modal-body">
                             <div class="row" align="left">
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລະຫັດຄະນະ</label>
-                                    <input type="text" name="Fac_ID_update" id="Fac_ID_update" placeholder="ລະຫັດຄະນະ" class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ຊື່ຄະນະ</label>
+                                    <input type="hidden" name="Fac_ID_update" id="Fac_ID_update"
+                                        placeholder="ລະຫັດຄະນະ">
                                     <input type="text" name="Fac_Name_update" id="Fac_Name_update" placeholder="ຊື່ຄະນະ" class="form-control">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
@@ -191,22 +181,30 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Fac_Name = document.getElementById('Fac_Name');
+const Uni_ID = document.getElementById('Uni_ID');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    Fac_NameValue = Fac_Name.value.trim();
+    Uni_IDValue = Uni_ID.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Fac_NameValue === '') {
+        setErrorFor(Fac_Name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Fac_Name);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+
+    if (Uni_IDValue === '') {
+        setErrorFor(Uni_ID, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    } else {
+        setSuccessFor(Uni_ID);
+    }
+    if (Fac_NameValue !== '' && Uni_IDValue !== '' ) {
+        document.getElementById("form1").action = "faculty";
         document.getElementById("form1").submit();
     }
 }
@@ -214,22 +212,29 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Fac_Name_update = document.getElementById('Fac_Name_update');
+const Uni_ID_update = document.getElementById('Uni_ID_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    Fac_Name_updateValue = Fac_Name_update.value.trim();
+    Uni_ID_updateValue = Uni_ID_update.value.trim();
+    if (Fac_Name_updateValue === '') {
+        setErrorFor(Fac_Name_update, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Fac_Name_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+
+    if (Uni_ID_updateValue === '') {
+        setErrorFor(Uni_ID_update, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    } else {
+        setSuccessFor(Uni_ID_update);
+    }
+    if (Fac_Name_updateValue !== '' && Uni_ID_updateValue !== '') {
+        document.getElementById("formUpdate").action = "faculty";
         document.getElementById("formUpdate").submit();
     }
 }

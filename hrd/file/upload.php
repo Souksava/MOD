@@ -239,22 +239,45 @@
 
 <script type="text/javascript">
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const Up_ID = document.getElementById('Up_ID');
+const Fy_ID = document.getElementById('Fy_ID');
+const Description = document.getElementById('Description');
+const Cover = document.getElementById('Cover');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
+    const Up_IDValue = Up_ID.value.trim();
+    const Fy_IDValue = Fy_ID.value.trim();
+    const DescriptionValue = Description.value.trim();
+    const CoverValue = Cover.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    if (Up_IDValue === '') {
+        setErrorFor(Up_ID, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(Up_ID);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+
+    if (Fy_IDValue === '') {
+        setErrorFor(Fy_ID, 'ກະລຸນາເລືອກສົກຮຽນປີ');
+    } else {
+        setSuccessFor(Fy_ID);
+    }
+
+    if (DescriptionValue === '') {
+        setErrorFor(Description, 'ກະລຸນາປ້ອນລາຍລະອຽດເອກະສານ');
+    } else {
+        setSuccessFor(Description);
+    }
+    if (CoverValue === '') {
+        setErrorFor(Cover, 'ກະລຸນາເລືອກຮູບໜ້າປົກ');
+    } else {
+        setSuccessFor(Cover);
+    }
+    if (Up_IDValue !== '' && Fy_IDValue !=='' && DescriptionValue !=='' && CoverValue !=='' ) {
+        document.getElementById("form1").action = "upload";
         document.getElementById("form1").submit();
     }
 }
@@ -262,22 +285,44 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const Up_ID_update = document.getElementById('Up_ID_update');
+const Fy_ID_update = document.getElementById('Fy_ID_update');
+const Description_update = document.getElementById('Description_update');
+const Cover_update = document.getElementById('Cover_update');
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const Up_ID_updateValue = Up_ID_update.value.trim();
+    const Fy_ID_updateValue = Fy_ID_update.value.trim();
+    const Description_updateValue = Description_update.value.trim();
+    const Cover_updateValue = Cover_update.value.trim();
+    if (Up_ID_updateValue === '') {
+        setErrorFor(Up_ID_update, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(Up_ID_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+
+    if (Fy_ID_updateValue === '') {
+        setErrorFor(Fy_ID_update, 'ກະລຸນາເລືອກສົກຮຽນປີ');
+    } else {
+        setSuccessFor(Fy_ID_update);
+    }
+
+    if (Description_updateValue === '') {
+        setErrorFor(Description_update, 'ກະລຸນາປ້ອນລາຍລະອຽດເອກະສານ');
+    } else {
+        setSuccessFor(Description_update);
+    }
+    if (Cover_updateValue === '') {
+        setErrorFor(Cover_update, 'ກະລຸນາເລືອກຮູບໜ້າປົກ');
+    } else {
+        setSuccessFor(Cover_update);
+    }
+    if (Doc_ID_updateValue !== '' && Fy_ID_updateValue !== '' && Description_updateValue !== ''  && Cover_updateValue !== ''  ) {
+        document.getElementById("formUpdate").action = "upload";
         document.getElementById("formUpdate").submit();
     }
 }

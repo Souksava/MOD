@@ -44,7 +44,7 @@
                                     <label>ສະຖານະຜູ້ໃຊ້ລະບົບ</label>
                                     <input type="hidden" name="User_ID" id="User_ID"
                                         placeholder="ລະຫັດຜູ້ໃຊ້">
-                                        <select name="Stt_ID" id="Stt_ID">
+                                        <select name="Stt_ID" id="stt_id">
                                         <option value="" disabled selected>ເລືອກສະຖານະຜູ້ໃຊ້ລະບົບ</option>
                                         <option value="ສະຖານະ1">ສະຖານະ1</option>
                                         <option value="ສະຖານະ2">ສະຖານະ2</option>
@@ -83,7 +83,7 @@
                                     <label>ສະຖານະຜູ້ໃຊ້ລະບົບ</label>
                                     <input type="hidden" name="User_ID_update" id="User_ID_update"
                                         placeholder="ລະຫັດຜູ້ໃຊ້">
-                                        <select name="Stt_ID_update" id="Stt_ID_update">
+                                        <select name="Stt_ID_update" id="stt_id_update">
                                         <option value="" disabled selected>ເລືອກສະຖານະຜູ້ໃຊ້ລະບົບ</option>
                                         <option value="ສະຖານະ1">ສະຖານະ1</option>
                                         <option value="ສະຖານະ2">ສະຖານະ2</option>
@@ -164,23 +164,32 @@
 
 
 <script type="text/javascript">
+
 const myform = document.getElementById('form1');
-const cate_name = document.getElementById('cate_name');
+const stt_id = document.getElementById('stt_id');
+// const stt_id2 = document.getElementById('stt_id2');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    const cate_nameValue = cate_name.value.trim();
 
-    if (cate_nameValue === '') {
-        setErrorFor(cate_name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+    const stt_idValue = stt_id.value.trim();
+    // const stt_id2Value = stt_id2.value.trim();
+
+    if (stt_idValue === '') {
+        setErrorFor(stt_id, 'ກະລຸນາປ້ອນສະຖານະຜູ້ໃຊ້ລະບົບ');
     } else {
-        setSuccessFor(cate_name);
+        setSuccessFor(stt_id);
     }
-    if (cate_nameValue !== '') {
-        document.getElementById("form1").action = "category";
+    // if (stt_id2Value === '') {
+    //     setErrorFor(stt_id2, 'ກະລຸນາປ້ອ2');
+    // } else {
+    //     setSuccessFor(stt_id2);
+    // }
+    if (stt_idValue !== '' && stt_idValue !== '') {
+        document.getElementById("form1").action = "user";
         document.getElementById("form1").submit();
     }
 }
@@ -188,22 +197,22 @@ function checkInputs() {
 
 <script type="text/javascript">
 const myformUpdate = document.getElementById('formUpdate');
-const cate_id_update = document.getElementById('cate_id_update');
-const cate_name_update = document.getElementById('cate_name_update');
+const stt_id_update = document.getElementById('stt_id_update');
+
 myformUpdate.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputsUpdate();
 });
 
 function checkInputsUpdate() {
-    const cate_name_updateValue = cate_name_update.value.trim();
-    if (cate_name_updateValue === '') {
-        setErrorFor(cate_name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+    const stt_id_updateValue = stt_id_update.value.trim();
+    if (stt_id_updateValue === '') {
+        setErrorFor(stt_id_update, 'ກະລຸນາເລືອກສະຖານະຜູ້ໃຊ້ລະບົບ');
     } else {
-        setSuccessFor(cate_name_update);
+        setSuccessFor(stt_id_update);
     }
-    if (cate_name_updateValue !== '') {
-        document.getElementById("formUpdate").action = "category";
+    if (stt_id_updateValue !== '') {
+        document.getElementById("formUpdate").action = "user";
         document.getElementById("formUpdate").submit();
     }
 }
