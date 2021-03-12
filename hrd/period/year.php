@@ -21,21 +21,13 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນຄັດຕິດເອກະສານ</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມຂໍ້ມູນສົກຮຽນປີ</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span a ria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="row" align="left">
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລັບດັບ</label>
-                                    <input type="text" name="cate_id" id="cate_id" placeholder="ລັບດັບ"
-                                        class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສົກຮຽນປີ</label>
                                     <input type="text" name="Fy_ID" id="Fy_ID" placeholder="ສົກຮຽນປີ">
@@ -44,26 +36,19 @@
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຕິດຄັດເອກະສານ</label>
-                                    <input type="File" name="File_Path" id="File_Path" placeholder="ຕິດຄັດເອກະສານ">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
                                     <label>ສະຖານະ</label>
                                     <select name="status" id="status">
-                                        <option value="">ເລືອກສະຖານະ</option>
+                                        <option value="" disabled selected>ເລືອກສະຖານະ</option>
                                         <option value="ເປີດ">ເປີດ</option>
-                                        <option value="&nbspປິດ">&nbspປິດ</option>
+                                        <option value="ປິດ">ປິດ</option>
                                     </select>
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
                                 </div>
                                 <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ອັບໂຫລດ</label>
-                                    <input type="file" name="Up_Date" id="Up_Date" placeholder="ອັບໂຫລດ">
+                                    <label>ຕິດຄັດເອກະສານ</label>
+                                    <input type="file" name="Up_Date" id="file" placeholder="ຕິດຄັດເອກະສານ">
                                     <i class="fas fa-check-circle "></i>
                                     <i class="fas fa-exclamation-circle "></i>
                                     <small class="">Error message</small>
@@ -86,7 +71,64 @@
     </div>
 </div>
 
-<form action="category" id="formUpdate" method="POST" enctype="multipart/form-data">
+
+
+
+<div class="clearfix"><br></div>
+<div class="table-responsive2">
+    <table id="detail_table" class="table table-bordered" style="width: 1000px;">
+        <tr>
+            <th style="text-align: center;margin: 0 auto;">ລຳດັບ</th>
+            <th style="text-align: center;margin: 0 auto;">ສົກຮຽນປີ</th>
+            <th style="text-align: center;">ຕິດຄັດເອກະສານ</th>
+            <th style="text-align: center;">ສະຖານະ</th>
+            <th style="text-align: center;">ອັບໂຫລດ</th>
+        </tr>
+        <tr>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">2019-2020</td>
+            <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
+            <td style="text-align:center">ເປີດ</td>
+            <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                    class="fa fa-upload toolcolor btnUpdate_year"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center">2018-2019</td>
+            <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
+            <td style="text-align:center">ເປີດ</td>
+            <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                    class="fa fa-upload toolcolor btnUpdate_year"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">3</td>
+            <td style="text-align:center">2017-2018</td>
+            <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
+            <td style="text-align:center">ປິດ</td>
+            <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                    class="fa fa-upload toolcolor btnUpdate_year"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">4</td>
+            <td style="text-align:center">2016-2017</td>
+            <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
+            <td style="text-align:center">ປິດ</td>
+            <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                    class="fa fa-upload toolcolor btnUpdate_year"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">5</td>
+            <td style="text-align:center">2020-2021</td>
+            <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
+            <td style="text-align:center">ປິດ</td>
+            <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
+                    class="fa fa-upload toolcolor btnUpdate_year"></a></td>
+        </tr>
+    </table>
+</div>
+
+
+<form action="year" id="formUpdate" method="POST" enctype="multipart/form-data">
     <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -100,49 +142,27 @@
                 <div class="modal-body">
                     <div class="row" align="left">
                         <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ລັບດັບ</label>
-                                    <input type="text" name="cate_id_update" id="cate_id_update" placeholder="ລັບດັບ"
-                                        class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ສົກຮຽນປີ</label>
-                                    <input type="text" name="Fy_ID_update" id="Fy_ID_update" placeholder="ສົກຮຽນປີ"
-                                        class="form-control">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ຕິດຄັດເອກະສານ</label>
-                                    <input type="File" name="File_update" id="File_update" placeholder="ຕິດຄັດເອກະສານ">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ສະຖານະ</label>
-                                    <select name="status_update" id="status_update">
-                                        <option value="">ເລືອກສະຖານະ</option>
-                                        <option value="ເປີດ">ເປີດ</option>
-                                        <option value="ປິດ">ປິດ</option>
-                                    </select>
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <label>ອັບໂຫລດ</label>
-                                    <input type="file" name="Up_Date_update" id="Up_Date_update" placeholder="ອັບໂຫລດ">
-                                    <i class="fas fa-check-circle "></i>
-                                    <i class="fas fa-exclamation-circle "></i>
-                                    <small class="">Error message</small>
-                                </div>
-                                <div class="col-md-12 col-sm-6 form-control2">
-                                    <img src="../../image/unnamed.jpg" id="output" width="100%" height="250">
-                                </div>
+                            <label>ສະຖານະ</label>
+                            <input type="hidden" name="id_update" id="id_update">
+                            <select name="status_update" id="status_update">
+                                <option value="" diasabled selected>ເລືອກສະຖານະ</option>
+                                <option value="ເປີດ">ເປີດ</option>
+                                <option value="ປິດ">ປິດ</option>
+                            </select>
+                            <i class="fas fa-check-circle "></i>
+                            <i class="fas fa-exclamation-circle "></i>
+                            <small class="">Error message</small>
+                        </div>
+                        <div class="col-md-12 col-sm-6 form-control2">
+                            <label>ຕິດຄັດເອກະສານ</label>
+                            <input type="file" name="file_update" id="file_update" placeholder="ອັບໂຫລດ">
+                            <i class="fas fa-check-circle "></i>
+                            <i class="fas fa-exclamation-circle "></i>
+                            <small class="">Error message</small>
+                        </div>
+                        <div class="col-md-12 col-sm-6 form-control2">
+                            <img src="../../image/unnamed.jpg" id="output2" width="100%" height="250">
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -154,95 +174,6 @@
         </div>
     </div>
 </form>
-
-
-<div class="clearfix"><br></div>
-    <div class="table-responsive2">
-        <table id="detail_table" class="table table-bordered" style="width: 1000px;">
-            <tr>
-                <th style="text-align: center;margin: 0 auto;">ລຳດັບ</th>
-                <th style="text-align: center;margin: 0 auto;">ສົກຮຽນປີ</th>
-                <th style="text-align: center;">ຕິດຄັດເອກະສານ</th>
-                <th style="text-align: center;">ສະຖານະ</th>
-                <th style="text-align: center;">ອັບໂຫລດ</th>
-            </tr>
-            <tr>
-                <td style="text-align:center">1</td>
-                <td style="text-align:center">2019-2020</td>
-                <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
-                <td style="text-align:center">ເປີດ</td>
-                <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
-            </tr>
-            <tr>
-                <td style="text-align:center">2</td>
-                <td style="text-align:center">2018-2019</td>
-                <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
-                <td style="text-align:center">ເປີດ</td>
-                <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
-            </tr>
-            <tr>
-                <td style="text-align:center">3</td>
-                <td style="text-align:center">2017-2018</td>
-                <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
-                <td style="text-align:center">ປີດ</td>
-                <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
-            </tr>
-            <tr>
-                <td style="text-align:center">4</td>
-                <td style="text-align:center">2016-2017</td>
-                <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
-                <td style="text-align:center">ປີດ</td>
-                <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
-            </tr>
-            <tr>
-                <td style="text-align:center">5</td>
-                <td style="text-align:center">2020-2021</td>
-                <td style="text-align:center">MOE_ປະເພດ12gd73dfgs4.pdf</td>
-                <td style="text-align:center">ປີດ</td>
-                <td style="text-align:center"> <a href="#" data-toggle="modal" data-target="#exampleModalUpdate"
-                        class="fa fa-upload toolcolor btnUpdate_year"></a></td>
-            </tr>
-        </table>
-    </div>
-
-
-
-<form action="rate" id="formUpdate" method="POST" enctype="multipart/form-data">
-    <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ອັບໂຫລດ</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row" align="left">
-                        <div class="col-md-12 col-sm-6 form-control2">
-                            <label>ເລືອກແຟ້ມເອກະສານຕິດຄັດ</label>
-                            <input type="file" name="img_path" id="img_path" onchange="loadFile(event)">
-                            <i class="fas fa-check-circle "></i>
-                            <i class="fas fa-exclamation-circle "></i>
-                            <small class="">Error message</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">ຍົກເລີກ</button>
-                    <button type="submit" name="update" id="btnUpdate" class="btn btn-outline-success"><span
-                            class="fa fa-paperclip"></span> ອັບໂຫລດ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-
 
 
 
@@ -286,32 +217,39 @@ $(document).ready(function() {
 });
 
 $('.btnDelete_year').on('click', function() {
-        $('#exampleModalDelete').modal('show');
-        $tr = $(this).closest('tr');
-        var data = $tr.children("td").map(function() {
-            return $(this).text();
-        }).get();
+    $('#exampleModalDelete').modal('show');
+    $tr = $(this).closest('tr');
+    var data = $tr.children("td").map(function() {
+        return $(this).text();
+    }).get();
 
-        console.log(data);
+    console.log(data);
 
-        $('#id').val(data[0]);
-    });
-    $('.btnUpdate_year').on('click', function() {
-        $('#exampleModalUpdate').modal('show');
-        $tr = $(this).closest('tr');
-        var data = $tr.children("td").map(function() {
-            return $(this).text();
-        }).get();
+    $('#id').val(data[0]);
+});
+
+$('.btnUpdate_year').on('click', function() {
+    $('#exampleModalUpdate').modal('show');
+    $tr = $(this).closest('tr');
+    var data = $tr.children("td").map(function() {
+        return $(this).text();
+    }).get();
+
+    console.log(data);
+
+    $('#status_update').val(data[3]);
+
+
+// if(data[2] === ''){
+//             document.getElementById("output2").src = ('<?php echo $path ?>image/camera.jpg');
+// }
+// else{
+//             document.getElementById("output2").src = ('<?php echo $path ?>image/'+data[2]);
+// }
     
-        console.log(data);
 
-        $('#cate_id_update').val(data[0]);
-        $('#Fy_ID_update').val(data[1]);
-        $('#File_update').val(data[2]);
-        $('#status_update').val(data[3]);
-        $('#Up_Date_update').val(data[4]);
-     
-    });
+
+});
 </script>
 
 
