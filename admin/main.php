@@ -40,12 +40,12 @@
     </a>
     <a href="<?php echo $links ?>edit/edit-demand" class="m-a">
         <div class="btn btn-light mainlink">
-            ແກ້ໄຂແຜນສ້າງນັກຮຽບ
+            ແກ້ໄຂແຜນສ້າງນັກຮຽນ
         </div>
     </a>
     <a href="<?php echo $links ?>edit/edit-supply" class="m-a">
         <div class="btn btn-light mainlink">
-            ແກ້ໄຂແຜນຮັບນັກຮຽບ
+            ແກ້ໄຂແຜນຮັບນັກຮຽນ
         </div>
     </a>
 

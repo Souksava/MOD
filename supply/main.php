@@ -18,7 +18,7 @@
     </a>
     <a href="<?php echo $links ?>create/new-supply" class="m-a">
         <div class="btn btn-light mainlink">
-            ສ້າງແຜນຮັບ
+            ສ້າງແຜນຮັບນັກ​ຮຽນ
         </div>
     </a>
     <a href="<?php echo $links ?>edit/edit-supply" class="m-a">
