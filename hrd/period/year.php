@@ -184,14 +184,16 @@
 const myform = document.getElementById('form1');
 const Fy_ID = document.getElementById('Fy_ID');
 const status = document.getElementById('status');
+const file = document.getElementById('file');
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
 });
 
 function checkInputs() {
-    Fy_IDValue = Fy_IDe.value.trim();
+    Fy_IDValue = Fy_ID.value.trim();
     statusValue = status.value.trim();
+    fileValue = file.value.trim();
     if (Fy_IDValue === '') {
         setErrorFor(Fy_ID, 'ກະລຸນາປ້ອນສົກຮຽນປີ');
     } else {
@@ -203,9 +205,42 @@ function checkInputs() {
     } else {
         setSuccessFor(status);
     }
-    if (Fy_IDValue !== '' && statusValue !== '' ) {
+    if (fileValue === '') {
+        setErrorFor(file, 'ກະລຸນາປ້ອນຕິດຄັດເອກະສານ');
+    } else {
+        setSuccessFor(file);
+    }
+    if (Fy_IDValue !== '' && statusValue !== '' && fileValue !== '' ) {
         document.getElementById("form1").action = "year";
         document.getElementById("form1").submit();
+    }
+}
+
+const myformUpdate = document.getElementById('formUpdate');
+const status_update = document.getElementById('status_update');
+const file_update = document.getElementById('file_update');
+myformUpdate.addEventListener('submit', (e) => {
+    e.preventDefault();
+    checkInputsUpdate();
+});
+
+function checkInputsUpdate() {
+    status_updateValue = status_update.value.trim();
+    file_updateValue = file_update.value.trim();
+    if (status_updateValue === '') {
+        setErrorFor(status_update, 'ກະລຸນາປ້ອນສົກຮຽນປີ');
+    } else {
+        setSuccessFor(status_update);
+    }
+
+    if (file_updateValue === '') {
+        setErrorFor(file_update, 'ຕິດຄັດເອກະສານ');
+    } else {
+        setSuccessFor(file_update);
+    }
+    if (status_updateValue !== '' && file_updateValue !== '') {
+        document.getElementById("formUpdate").action = "year";
+        document.getElementById("formUpdate").submit();
     }
 }
 

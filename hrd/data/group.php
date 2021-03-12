@@ -170,7 +170,7 @@ function checkInputs() {
     const Dept_NameValue = Dept_Name.value.trim();
 
     if (Dept_NameValue === '') {
-        setErrorFor(Dept_Name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+        setErrorFor(Dept_Name, 'ກະລຸນາປ້ອນຊື່ກົມການສຶກສາ');
     } else {
         setSuccessFor(Dept_Name);
     }
@@ -192,7 +192,7 @@ myformUpdate.addEventListener('submit', (e) => {
 function checkInputsUpdate() {
     const Dept_Name_updateValue = Dept_Name_update.value.trim();
     if (Dept_Name_updateValue === '') {
-        setErrorFor(Dept_Name_update, 'ກະລຸນາປ້ອນລະຫັດປະເພດສິນຄ້າ');
+        setErrorFor(Dept_Name_update, 'ກະລຸນາປ້ອນຊື່ກົມການສຶກສາ);
     } else {
         setSuccessFor(Dept_Name_update);
     }

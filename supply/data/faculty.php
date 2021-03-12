@@ -193,13 +193,13 @@ function checkInputs() {
     Uni_IDValue = Uni_ID.value.trim();
 
     if (Fac_NameValue === '') {
-        setErrorFor(Fac_Name, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+        setErrorFor(Fac_Name, 'ກະລຸນາປ້ອນຊື່ຄະນະ');
     } else {
         setSuccessFor(Fac_Name);
     }
 
     if (Uni_IDValue === '') {
-        setErrorFor(Uni_ID, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+        setErrorFor(Uni_ID, 'ກະລຸນາປ້ອນວິທະຍາໄລ');
     } else {
         setSuccessFor(Uni_ID);
     }
@@ -223,13 +223,13 @@ function checkInputsUpdate() {
     Fac_Name_updateValue = Fac_Name_update.value.trim();
     Uni_ID_updateValue = Uni_ID_update.value.trim();
     if (Fac_Name_updateValue === '') {
-        setErrorFor(Fac_Name_update, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+        setErrorFor(Fac_Name_update, 'ກະລຸນາປ້ອນຊື່ຄະນະ');
     } else {
         setSuccessFor(Fac_Name_update);
     }
 
     if (Uni_ID_updateValue === '') {
-        setErrorFor(Uni_ID_update, 'ກະລຸນາປ້ອນຊື່ປະເພດສິນຄ້າ');
+        setErrorFor(Uni_ID_update, 'ກະລຸນາປ້ອນວິທະຍາໄລ');
     } else {
         setSuccessFor(Uni_ID_update);
     }
